@@ -1,5 +1,8 @@
 var newPlayer = {};
 var score = 0;
+var focus = 0;
+var time = 0;
+var money = 0;
 
 function Player() {
   this.playerFocus = 0;
@@ -8,46 +11,56 @@ function Player() {
   this.playerScore = 0;
 }
 
-Player.prototype.calculateFocus = function () {
-  return this.playerFocus += this.playerFocus;
+Player.prototype.calculateFocus = function (focus) {
+  return this.playerFocus += focus;
 }
 
-Player.prototype.calculateMoney = function () {
-  return this.playerMoney += this.playerMoney;
+Player.prototype.calculateTime = function (time) {
+  return this.playerTime += time;
 }
 
-Player.prototype.calculateTime = function () {
-  return this.playerTime += this.playerTime;
+Player.prototype.calculateMoney = function (money) {
+  return this.playerMoney += money;
 }
 
 Player.prototype.calculateScore = function () {
   return this.playerScore = this.playerFocus + this.playerMoney + this.playerTime;
 }
 
-
+// updateScoreboard
+function updateScoreboard (focus, time, money, score) {
+  $(".scoreboard-focus").text(newPlayer.playerFocus);
+  $(".scoreboard-time").text(newPlayer.playerTime);
+  $(".scoreboard-money").text(newPlayer.playerMoney);
+  $(".scoreboard-score").text(newPlayer.playerScore);
+}
 
 
 $(document).ready(function() {
+  // we may need a start button?
 
+  //initializes our new player
   newPlayer = new Player();
-
-  // display scores function
+  console.log(newPlayer);
+  // displays starting scores (should be zeros)
+  updateScoreboard();
+  console.log(".scoreboard-score");
 
   $("#button-1A").click(function(event){
-
+    event.preventDefault();
     // collect adjustments to our variables
-    var focus = $("input:radio[name=focus]:checked").val();
-    var time = $("input:radio[name=time]:checked").val();
-    var money = $("input:radio[name=money]:checked").val();
+    var focus = parseInt($("input:radio[name=focus]:checked").val());
+    var time = parseInt($("input:radio[name=time]:checked").val());
+    var money = parseInt($("input:radio[name=money]:checked").val());
 
-    newPlayer.calculateFocus();
-    newPlayer.calculateTime();
-    newPlayer.calculateMoney();
+    newPlayer.calculateFocus(focus);
+    newPlayer.calculateTime(time);
+    newPlayer.calculateMoney(money);
     newPlayer.calculateScore();
+     console.log(newPlayer);
+    //display updated scores depending on choices
 
-    //display updated scores
-
-    
+    updateScoreboard();
 
 
   });

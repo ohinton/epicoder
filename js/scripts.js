@@ -12,26 +12,34 @@ Player.prototype.calculateFocus = function () {
   return this.playerFocus += this.playerFocus;
 }
 
-Player.prototype.calculateMoney = function () {
-  return this.playerMoney += this.playerMoney;
-}
-
 Player.prototype.calculateTime = function () {
   return this.playerTime += this.playerTime;
+}
+
+Player.prototype.calculateMoney = function () {
+  return this.playerMoney += this.playerMoney;
 }
 
 Player.prototype.calculateScore = function () {
   return this.playerScore = this.playerFocus + this.playerMoney + this.playerTime;
 }
 
-
+function updateScoreboard (focus, time, money, score) {
+  $(".show-focus").text(newPlayer.playerFocus);
+  $(".show-time").text(newPlayer.playerTime);
+  $(".show-money").text(newPlayer.playerMoney);
+  $(".show-score").text(newPlayer.playerScore);
+}
 
 
 $(document).ready(function() {
 
-  newPlayer = new Player();
+  // we may need a start button?
 
-  // display scores function
+  //initializes our new player
+  newPlayer = new Player();
+  // displays starting scores (should be zeros)
+  updateScoreboard();
 
   $("#button-1A").click(function(event){
 
@@ -45,9 +53,9 @@ $(document).ready(function() {
     newPlayer.calculateMoney();
     newPlayer.calculateScore();
 
-    //display updated scores
+    //display updated scores depending on choices
 
-    
+    updateScoreboard();
 
 
   });

@@ -10,23 +10,33 @@
   </head>
   <body>
     <div class="container">
-
+      <div id="landing-page">
+        <h1>Welcome to Epicoder!</h1>
+        <form id="get-user-name">
+          <div class="form-group">
+            <label for="new-user-name">Please enter your name:</label>
+            <input type="text" id="new-user-name">
+            <button type="submit" class="btn">Let's Begin!</button>
+          </div>
+        </form>
+      </div>
       <div id="scoreboard-header">
         <h3>Scoreboard</h3>
         <ul>
-          <li>Name: <span class="scoreboard-name"></span></li>
+          <li>Name: <span class="user-name"></span></li>
           <li>Focus: <span class="scoreboard-focus"></span></li>
           <li>Time: <span class="scoreboard-time"></span></li>
           <li>Money: <span class="scoreboard-money"></span></li>
+          <li>Total Score: <span class="scoreboard-score"></span></li>
         </ul>
         <hr>
       </div>
 
       <div id="page-1">
         <p>
-          Good morning, sunshine! Sleep and breakfast are very important parts of the day. Choose how you will spend your night and morning wisely!
+          Good morning, <span class="user-name"></span>! Sleep and breakfast are very important parts of the day. Choose how you will spend your night and morning wisely!
         </p>
-        <form>
+        <form id="page-1-form">
           <div class="form-group">
             <h3>Last Night</h3>
             <div class="radio">

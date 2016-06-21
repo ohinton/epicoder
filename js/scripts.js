@@ -4,7 +4,8 @@ var focus = 0;
 var time = 0;
 var money = 0;
 
-function Player() {
+function Player(name) {
+  this.playerName = name;
   this.playerFocus = 0;
   this.playerTime = 0;
   this.playerMoney = 0;
@@ -28,7 +29,8 @@ Player.prototype.calculateScore = function () {
 }
 
 // updateScoreboard
-function updateScoreboard (focus, time, money, score) {
+function updateScoreboard (name, focus, time, money, score) {
+  $(".user-name").text(newPlayer.playerName);
   $(".scoreboard-focus").text(newPlayer.playerFocus);
   $(".scoreboard-time").text(newPlayer.playerTime);
   $(".scoreboard-money").text(newPlayer.playerMoney);
@@ -37,14 +39,14 @@ function updateScoreboard (focus, time, money, score) {
 
 
 $(document).ready(function() {
-  // we may need a start button?
 
-  //initializes our new player
-  newPlayer = new Player();
-  console.log(newPlayer);
-  // displays starting scores (should be zeros)
-  updateScoreboard();
-  console.log(".scoreboard-score");
+  $("#new-user-name").submit(function(event){
+    event.preventDefault();
+    var name = $(".user-name").val();
+
+    newPlayer = new Player(name);
+    updateScoreboard();
+  });
 
   $("#button-1A").click(function(event){
     event.preventDefault();

@@ -60,22 +60,22 @@
           <div class="form-group">
             <h3>Last Night</h3>
             <div class="radio">
+              <label><input type="radio" name="focus" value="3">You go out drinking with your new JS class buddies, and get home super late.</label>
+            </div>
+            <div class="radio">
               <label><input type="radio" name="focus" value="10">You look ahead at the next day’s lesson and start doing some work, and go to bed at 11 pm.</label>
             </div>
             <div class="radio">
               <label><input type="radio" name="focus" value="6">You shower and pack your lunch, but you don’t make it to bed until midnight.</label>
             </div>
-            <div class="radio">
-              <label><input type="radio" name="focus" value="3">You go out drinking with your new JS class buddies, and get home super late.</label>
-            </div>
           </div>
           <div class="form-group">
             <h3>Wake Up!</h3>
             <div class="radio">
-              <label><input type="radio" name="time" value="10">You jump straight out of bed in the morning, wide awake.</label>
+              <label><input type="radio" name="time" value="6">You hit the snooze for 5 minutes, but then you jump out of bed.</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="time" value="6">You hit the snooze for 5 minutes, but then you jump out of bed.</label>
+              <label><input type="radio" name="time" value="10">You jump straight out of bed in the morning, wide awake.</label>
             </div>
             <div class="radio">
               <label><input type="radio" name="time" value="3">You really want to sleep in, so you hit the snooze 3 times.</label>
@@ -84,13 +84,13 @@
           <div class="form-group">
             <h3>Breakfast Time</h3>
             <div class="radio">
+              <label><input type="radio" name="money" value="3">You grab breakfast on the run.</label>
+            </div>
+            <div class="radio">
               <label><input type="radio" name="money" value="10">You pack a breakfast that you’ll eat at Epicodus.</label>
             </div>
             <div class="radio">
               <label><input type="radio" name="money" value="6">You cook up and eat a full breakfast at home.</label>
-            </div>
-            <div class="radio">
-              <label><input type="radio" name="money" value="3">You grab breakfast on the run.</label>
             </div>
           </div>
           <p>
@@ -120,6 +120,18 @@
         </p>
         <form id="page-3a-form">
           <div class="form-group">
+            <h3>You can’t find your monthly bus pass, what do you do?</h3>
+            <div class="radio">
+              <label><input type="radio" name="money" value="10">You beg the bus driver to let you on.</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="money" value="6">You have no money, so you have to get out and walk.</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="money" value="3">You don’t have exact change, so you have to buy a day pass with a ten dollar bill. </label>
+            </div>
+          </div>
+          <div class="form-group">
             <h3>The bus is super crowded, what should you do?</h3>
             <div class="radio">
               <label><input type="radio" name="focus" value="10">You take the only seat available, before an elderly woman gets to it.</label>
@@ -141,18 +153,6 @@
             </div>
             <div class="radio">
               <label><input type="radio" name="time" value="3">You take the opportunity to get in a quick cat nap.</label>
-            </div>
-          </div>
-          <div class="form-group">
-            <h3>You can’t find your monthly bus pass, what do you do?</h3>
-            <div class="radio">
-              <label><input type="radio" name="money" value="10">You beg the bus driver to let you on.</label>
-            </div>
-            <div class="radio">
-              <label><input type="radio" name="money" value="6">You have no money, so you have to get out and walk.</label>
-            </div>
-            <div class="radio">
-              <label><input type="radio" name="money" value="3">You don’t have exact change, so you have to buy a day pass with a ten dollar bill. </label>
             </div>
           </div>
           <p>
@@ -183,18 +183,6 @@
             </div>
           </div>
           <div class="form-group">
-            <h3>You arrive to Epicodus, and you need to park your bike. What do you do?</h3>
-            <div class="radio">
-              <label><input type="radio" name="time" value="10">You calmly walk your bike to the vault and lock it.</label>
-            </div>
-            <div class="radio">
-              <label><input type="radio" name="time" value="6">You take your bike down the regular elevator, jeopardizing Epicoudus’ lease.</label>
-            </div>
-            <div class="radio">
-              <label><input type="radio" name="time" value="3">You ride your bike down the hall, and the security guard stops and scolds you.</label>
-            </div>
-          </div>
-          <div class="form-group">
             <h3>You get a flat tire! What do you do?</h3>
             <div class="radio">
               <label><input type="radio" name="money" value="10">You have a tire kit in your bag, so you fix the flat and go on your way.</label>
@@ -204,6 +192,18 @@
             </div>
             <div class="radio">
               <label><input type="radio" name="money" value="3">You push your bike the whole way to Epicodus.</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <h3>You arrive to Epicodus, and you need to park your bike. What do you do?</h3>
+            <div class="radio">
+              <label><input type="radio" name="time" value="10">You calmly walk your bike to the vault and lock it.</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="time" value="6">You take your bike down the regular elevator, jeopardizing Epicoudus’ lease.</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="time" value="3">You ride your bike down the hall, and the security guard stops and scolds you.</label>
             </div>
           </div>
           <p>
@@ -231,15 +231,15 @@
         </p>
         <form id="page-5a-form">
           <div class="form-group">
-            <h3>The elevator gets stuck. Help! </h3>
+            <h3>You suddenly realize you’re craving coffee. What do you do?</h3>
             <div class="radio">
-              <label><input type="radio" name="focus" value="10">You whip out your javascript book that you got from the library and start studying like a mad coding machine while you wait for the fire fighters to arrive.</label>
+              <label><input type="radio" name="money" value="10">You are super prepared and you already brought some.</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="focus" value="6">You bond with your fellow epicodus students during this terrifying experience.</label>
+              <label><input type="radio" name="money" value="6">You decide to go for the best part of waking up, Folgers, in the Epicodus kitchen. </label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="focus" value="3">Panic sets in. You wonder if you’ll ever get out and log in on time. You cry softly in the corner.</label>
+              <label><input type="radio" name="money" value="3">You run to Starbucks and order a non-fat frappuccino with extra whipped cream and chocolate sauce.</label>
             </div>
           </div>
           <div class="form-group">
@@ -255,15 +255,15 @@
             </div>
           </div>
           <div class="form-group">
-            <h3>You suddenly realize you’re craving coffee. What do you do?</h3>
+            <h3>The elevator gets stuck. Help! </h3>
             <div class="radio">
-              <label><input type="radio" name="money" value="10">You are super prepared and you already brought some.</label>
+              <label><input type="radio" name="focus" value="10">You whip out your javascript book that you got from the library and start studying like a mad coding machine while you wait for the fire fighters to arrive.</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="money" value="6">You decide to go for the best part of waking up, Folgers, in the Epicodus kitchen. </label>
+              <label><input type="radio" name="focus" value="6">You bond with your fellow epicodus students during this terrifying experience.</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="money" value="3">You run to Starbucks and order a non-fat frappuccino with extra whipped cream and chocolate sauce.</label>
+              <label><input type="radio" name="focus" value="3">Panic sets in. You wonder if you’ll ever get out and log in on time. You cry softly in the corner.</label>
             </div>
           </div>
           <p>
@@ -280,6 +280,18 @@
           You're such a badass, <span class="user-name"></span>! Not only do you know where the stairs are, you're also fit as a fiddle! Let's go!
         </p>
         <form id="page-5b-form">
+            <div class="form-group">
+              <h3>You suddenly realize you’re craving coffee. What do you do?</h3>
+              <div class="radio">
+                <label><input type="radio" name="money" value="10">You are super prepared and you already brought some.</label>
+              </div>
+              <div class="radio">
+                <label><input type="radio" name="money" value="6">You decide to go for the best part of waking up, Folgers, in the Epicodus kitchen. </label>
+              </div>
+              <div class="radio">
+                <label><input type="radio" name="money" value="3">You run to Starbucks and order a non-fat frappuccino with extra whipped cream and chocolate sauce.</label>
+              </div>
+            </div>
           <div class="form-group">
             <h3>How do you best use your time while in the stairwell?</h3>
             <div class="radio">
@@ -302,18 +314,6 @@
             </div>
             <div class="radio">
               <label><input type="radio" name="time" value="3">You channel your inner UFC fighter, try to force your way up the stairs, and get arrested.</label>
-            </div>
-          </div>
-          <div class="form-group">
-            <h3>You suddenly realize you’re craving coffee. What do you do?</h3>
-            <div class="radio">
-              <label><input type="radio" name="money" value="10">You are super prepared and you already brought some.</label>
-            </div>
-            <div class="radio">
-              <label><input type="radio" name="money" value="6">You decide to go for the best part of waking up, Folgers, in the Epicodus kitchen. </label>
-            </div>
-            <div class="radio">
-              <label><input type="radio" name="money" value="3">You run to Starbucks and order a non-fat frappuccino with extra whipped cream and chocolate sauce.</label>
             </div>
           </div>
           <p>

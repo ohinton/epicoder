@@ -48,6 +48,7 @@ function clearPageDisplay () {
   $(".page-score").text("");
 }
 
+
 $(document).ready(function() {
 
 //landing page
@@ -71,6 +72,7 @@ $(document).ready(function() {
     var time = parseInt($("#page-1a-form input:radio[name=time]:checked").val());
     var money = parseInt($("#page-1a-form input:radio[name=money]:checked").val());
     //display scores from this page
+
     updatePageScores(focus, time, money);
     //calculate new player scores for focus, time, money and total score
 
@@ -123,6 +125,7 @@ $(document).ready(function() {
 
     updatePageScores(focus, time, money);
 
+    newPlayer.playerTime -= 40;
     newPlayer.calculateFocus(focus);
     newPlayer.calculateTime(time);
     newPlayer.calculateMoney(money);
@@ -147,6 +150,7 @@ $(document).ready(function() {
 
     updatePageScores(focus, time, money);
 
+    newPlayer.playerTime -= 40;
     newPlayer.calculateFocus(focus);
     newPlayer.calculateTime(time);
     newPlayer.calculateMoney(money);
@@ -194,6 +198,7 @@ $(document).ready(function() {
 
     updatePageScores(focus, time, money);
 
+    newPlayer.playerTime -= 10;
     newPlayer.calculateFocus(focus);
     newPlayer.calculateTime(time);
     newPlayer.calculateMoney(money);
@@ -217,6 +222,7 @@ $(document).ready(function() {
 
     updatePageScores(focus, time, money);
 
+    newPlayer.playerTime -= 10;
     newPlayer.calculateFocus(focus);
     newPlayer.calculateTime(time);
     newPlayer.calculateMoney(money);
@@ -240,6 +246,7 @@ $(document).ready(function() {
 
     updatePageScores(focus, time, money);
 
+    newPlayer.playerTime -= 10;
     newPlayer.calculateFocus(focus);
     newPlayer.calculateTime(time);
     newPlayer.calculateMoney(money);
@@ -263,6 +270,7 @@ $(document).ready(function() {
 
     updatePageScores(focus, time, money);
 
+    newPlayer.playerTime -= 10;
     newPlayer.calculateFocus(focus);
     newPlayer.calculateTime(time);
     newPlayer.calculateMoney(money);

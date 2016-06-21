@@ -1,9 +1,3 @@
-var newPlayer = {};
-var score = 0;
-var focus = 0;
-var time = 0;
-var money = 0;
-
 function Player(name) {
   this.playerName = name;
   this.playerFocus = 0;
@@ -37,13 +31,12 @@ function updateScoreboard (name, focus, time, money, score) {
   $(".scoreboard-score").text(newPlayer.playerScore);
 }
 
-
 $(document).ready(function() {
 
   $("form#get-user-name").submit(function(event){
     event.preventDefault();
-    var name = $("#new-user-name").val();
 
+    var name = $("#new-user-name").val();
     newPlayer = new Player(name);
     updateScoreboard();
   });
@@ -54,17 +47,20 @@ $(document).ready(function() {
     var focus = parseInt($("input:radio[name=focus]:checked").val());
     var time = parseInt($("input:radio[name=time]:checked").val());
     var money = parseInt($("input:radio[name=money]:checked").val());
+    var pageScore = focus + time + money;
 
     newPlayer.calculateFocus(focus);
     newPlayer.calculateTime(time);
     newPlayer.calculateMoney(money);
     newPlayer.calculateScore();
-     console.log(newPlayer);
+
+    console.log(newPlayer);
     //display updated scores depending on choices
-
     updateScoreboard();
-
-
+    //display new values for page 1-A player choices
+    $(".page-focus").text(focus);
+    $(".page-time").text(time);
+    $(".page-money").text(money);
+    $(".page-score").text(pageScore);
   });
-
 });

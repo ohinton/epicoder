@@ -1,12 +1,18 @@
 /*General Styles*/
-
+body {
+  background-color: #b2b2b2;
+}
 h1 {
+  color: #7D0505;
   font-size: 4em;
   text-align: center;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 
 h2 {
+  color: #7D0505;
   text-align: center;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 h3 {
@@ -18,7 +24,14 @@ p {
 }
 
 .btn {
+  background-color: #7D0505;
+  color: #EDEECB;
+  font-weight: bold;
+  border: 1px solid black;
+}
 
+.btn:hover {
+  color:  #595959;
 }
 
 /*Scoreboard Styles*/
@@ -37,13 +50,19 @@ p {
 
 /*Landing Page Styles*/
 #landing-page img {
-  max-width: 80vw;
+  max-width: 60vw;
   display: block;
   margin: auto;
-  border: 3px solid red;
+  border: 5px solid #7D0505;
 }
 #get-user-name {
   text-align: center;
+  background-color: #fffefe;
+  border: 5px solid #7D0505;
+  padding-top: 2vh;
+  max-width: 50vw;
+  display: block;
+  margin: auto;
 }
 
 

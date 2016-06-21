@@ -1,4 +1,4 @@
-button {
+.btn {
 
 }
 
@@ -9,3 +9,7 @@ h1 {
 h3 {
 
 }
+
+/*#page-1, #page-2, #page-3a, #page-3b, #page-4, #page-5a, #page-5b, #page-6, #page-7, #final-page, #low-score, #medium-score, #high-score {
+  display: none;
+}*/

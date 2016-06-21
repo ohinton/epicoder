@@ -3,7 +3,7 @@ var newPlayer = {};
 function Player(name) {
   this.playerName = name;
   this.playerFocus = 0;
-  this.playerTime = 0;
+  this.playerTime = 100;
   this.playerMoney = 0;
   this.playerScore = 0;
 }
@@ -31,13 +31,6 @@ function updateScoreboard (name, focus, time, money, score) {
   $(".scoreboard-time").text(newPlayer.playerTime);
   $(".scoreboard-money").text(newPlayer.playerMoney);
   $(".scoreboard-score").text(newPlayer.playerScore);
-}
-
-function resetQuizValues (focus, time, money, pageScore) {
-  var focus = 0;
-  var time = 0;
-  var money = 0;
-  var pageScore =0;
 }
 
 function updatePageScores (focus, time, money) {
@@ -74,21 +67,27 @@ $(document).ready(function() {
   $("#go-to-2a").click(function(event){
     event.preventDefault();
     // collect adjustments to our variables
-    var focus = parseInt($("#page-1-form input:radio[name=focus]:checked").val());
-    var time = parseInt($("#page-1-form input:radio[name=time]:checked").val());
-    var money = parseInt($("#page-1-form input:radio[name=money]:checked").val());
+    var focus = parseInt($("#page-1a-form input:radio[name=focus]:checked").val());
+    var time = parseInt($("#page-1a-form input:radio[name=time]:checked").val());
+    var money = parseInt($("#page-1a-form input:radio[name=money]:checked").val());
     //display scores from this page
     updatePageScores(focus, time, money);
     //calculate new player scores for focus, time, money and total score
+
+    newPlayer.playerTime -= 30;
+    console.log(newPlayer.playerTime);
+
     newPlayer.calculateFocus(focus);
     newPlayer.calculateTime(time);
     newPlayer.calculateMoney(money);
     newPlayer.calculateScore();
+    console.log(newPlayer.playerTime);
 
     updateScoreboard();
 
     $("#page-1a").hide();
     $("#page-2a").show();
+    $("#scoreboard-page").show();
   });
 
 //page 2 (branching page)
@@ -99,6 +98,7 @@ $(document).ready(function() {
 
     $("#page-2a").hide();
     $("#page-3a").show();
+    $("#scoreboard-page").hide();
 
   });
 
@@ -109,6 +109,7 @@ $(document).ready(function() {
 
     $("#page-2a").hide();
     $("#page-3b").show();
+    $("#scoreboard-page").hide();
 
   });
 
@@ -131,6 +132,7 @@ $(document).ready(function() {
 
     $("#page-3a").hide();
     $("#page-4a").show();
+    $("#scoreboard-page").show();
 
   });
 
@@ -139,9 +141,9 @@ $(document).ready(function() {
     event.preventDefault();
 
     // collect adjustments to our variables
-    var focus = parseInt($("input:radio[name=focus]:checked").val());
-    var time = parseInt($("input:radio[name=time]:checked").val());
-    var money = parseInt($("input:radio[name=money]:checked").val());
+    var focus = parseInt($("#page-3b-form input:radio[name=focus]:checked").val());
+    var time = parseInt($("#page-3b-form input:radio[name=time]:checked").val());
+    var money = parseInt($("#page-3b-form input:radio[name=money]:checked").val());
 
     updatePageScores(focus, time, money);
 
@@ -154,6 +156,7 @@ $(document).ready(function() {
 
     $("#page-3b").hide();
     $("#page-4a").show();
+    $("#scoreboard-page").show();
 
   });
 
@@ -162,10 +165,10 @@ $(document).ready(function() {
     event.preventDefault();
 
     clearPageDisplay();
-    updatePageScores(focus, time, money);
 
     $("#page-4a").hide();
     $("#page-5a").show();
+    $("#scoreboard-page").hide();
 
   });
 
@@ -173,10 +176,111 @@ $(document).ready(function() {
     event.preventDefault();
 
     clearPageDisplay();
-    updatePageScores();
 
     $("#page-4a").hide();
     $("#page-5b").show();
+    $("#scoreboard-page").hide();
+
+  });
+
+//page 5a
+  $("#5a-go-to-6a").click(function(event){
+    event.preventDefault();
+
+    // collect adjustments to our variables
+    var focus = parseInt($("#page-5a-form input:radio[name=focus]:checked").val());
+    var time = parseInt($("#page-5a-form input:radio[name=time]:checked").val());
+    var money = parseInt($("#page-5a-form input:radio[name=money]:checked").val());
+
+    updatePageScores(focus, time, money);
+
+    newPlayer.calculateFocus(focus);
+    newPlayer.calculateTime(time);
+    newPlayer.calculateMoney(money);
+    newPlayer.calculateScore();
+
+    updateScoreboard();
+
+    $("#page-5a").hide();
+    $("#page-6a").show();
+    $("#scoreboard-page").show();
+
+  });
+
+  //page 5b
+  $("#5b-go-to-6a").click(function(event){
+    event.preventDefault();
+    // collect adjustments to our variables
+    var focus = parseInt($("#page-5b-form input:radio[name=focus]:checked").val());
+    var time = parseInt($("#page-5b-form input:radio[name=time]:checked").val());
+    var money = parseInt($("#page-5b-form input:radio[name=money]:checked").val());
+
+    updatePageScores(focus, time, money);
+
+    newPlayer.calculateFocus(focus);
+    newPlayer.calculateTime(time);
+    newPlayer.calculateMoney(money);
+    newPlayer.calculateScore();
+
+    updateScoreboard();
+
+    $("#page-5b").hide();
+    $("#page-6a").show();
+    $("#scoreboard-page").show();
+    });
+
+//page 6a
+  $("#go-to-7a").click(function(event){
+    event.preventDefault();
+
+    // collect adjustments to our variables
+    var focus = parseInt($("#page-6a-form input:radio[name=focus]:checked").val());
+    var time = parseInt($("#page-6a-form input:radio[name=time]:checked").val());
+    var money = parseInt($("#page-6a-form input:radio[name=money]:checked").val());
+
+    updatePageScores(focus, time, money);
+
+    newPlayer.calculateFocus(focus);
+    newPlayer.calculateTime(time);
+    newPlayer.calculateMoney(money);
+    newPlayer.calculateScore();
+
+    updateScoreboard();
+
+    $("#page-6a").hide();
+    $("#page-7a").show();
+    $("#scoreboard-page").show();
+  });
+
+//page 7a
+  $("#go-to-finish").click(function(event){
+    event.preventDefault();
+
+    // collect adjustments to our variables
+    var focus = parseInt($("#page-7a-form input:radio[name=focus]:checked").val());
+    var time = parseInt($("#page-7a-form input:radio[name=time]:checked").val());
+    var money = parseInt($("#page-7a-form input:radio[name=money]:checked").val());
+
+    updatePageScores(focus, time, money);
+
+    newPlayer.calculateFocus(focus);
+    newPlayer.calculateTime(time);
+    newPlayer.calculateMoney(money);
+    newPlayer.calculateScore();
+
+    updateScoreboard();
+
+    $("#page-7a").hide();
+    $("#page-final").show();
+    $("#scoreboard-page").show();
+
+    if (newPlayer.playerScore < 101) {
+      $("#low-score").show();
+    } else if (newPlayer.playerScore < 201) {
+      $("#medium-score").show();
+    } else {
+      $("#high-score").show();
+    }
 
   });
 

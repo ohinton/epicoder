@@ -40,9 +40,9 @@ function updateScoreboard (name, focus, time, money, score) {
 
 $(document).ready(function() {
 
-  $("#new-user-name").submit(function(event){
+  $("form#get-user-name").submit(function(event){
     event.preventDefault();
-    var name = $(".user-name").val();
+    var name = $("#new-user-name").val();
 
     newPlayer = new Player(name);
     updateScoreboard();

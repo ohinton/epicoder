@@ -6,6 +6,7 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.0.0.js"></script>
     <script src="js/scripts.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Allerta+Stencil|Quantico:400,700,400italic,700italic|Monoton' rel='stylesheet' type='text/css'>
     <title>EPICODER!</title>
   </head>
   <body>
@@ -27,34 +28,37 @@
       </div>
 
       <!-- Scoreboard -->
-      <div id="scoreboard-header">
+      <div id="scoreboard-header" class="row">
         <!-- Main Scoreboard -->
-        <div id="scoreboard-main">
-          <h3>Scoreboard</h3>
-          <ul>
-            <li>Name: <span class="user-name"></span></li>
-            <li>Focus: <span class="scoreboard-focus"></span></li>
-            <li>Time: <span class="scoreboard-time"></span></li>
-            <li>Money: <span class="scoreboard-money"></span></li>
-            <li>Total Score: <span class="scoreboard-score"></span></li>
-          </ul>
+        <div id="scoreboard-main" class="col-md-6">
+          <div class="scoreboard-page-box">
+            <h3>Scoreboard</h3>
+            <ul>
+              <li>name: <span class="user-name"></span></li>
+              <li>focus: <span class="scoreboard-focus"></span></li>
+              <li>time: <span class="scoreboard-time"></span></li>
+              <li>money: <span class="scoreboard-money"></span></li>
+              <li>total score: <span class="scoreboard-score"></span></li>
+            </ul>
+          </div>
         </div>
         <!-- Page Scoreboard -->
-        <div id="scoreboard-page">
-          <h3>For your last challenge,</h3>
-          <ul>
-            <li>you earned <span class="page-focus"></span> points of focus</li>
-            <li>you saved <span class="page-time"></span> minutes</li>
-            <li>you saved <span class="page-money"></span> dollars</li>
-            <li>You earned a total of <span class="page-score"></span> for this round.</li>
-          </ul>
-          <hr>
+        <div id="scoreboard-page" class="col-md-6">
+          <div class="scoreboard-page-box">
+            <h3>For your last challenge,</h3>
+            <ul>
+              <li>you earned <span class="page-focus"></span> points of focus</li>
+              <li>you saved <span class="page-time"></span> minutes</li>
+              <li>you saved <span class="page-money"></span> dollars</li>
+              <li>you earned a total of <span class="page-score"></span></li>
+            </ul>
+          </div>
         </div>
       </div>
 
       <!-- Page 1 -->
       <div id="page-1a">
-        <h3>Page 1</h3>
+        <h2>Page 1</h2>
         <p>
           Good morning, <span class="user-name"></span>! Sleep and breakfast are very important parts of the day. Choose how you will spend your night and morning wisely! You usually take around 30 minutes to get ready and leave the house. Can you save some time this morning?
         </p>
@@ -98,25 +102,35 @@
           <p>
             Time to leave the house!
           </p>
-          <button type="submit" id="go-to-2a">Leave the House</button>
+          <button type="submit" id="go-to-2a" class="btn">Leave the House</button>
         </form>
         <hr>
       </div>
 
       <!-- Page 2 -->
-      <div id="page-2a">
-        <h3>Page 2</h3>
+      <div id="page-2a" class="branch-page">
+        <h2>Page 2</h2>
         <p>
           You’re out of the house and now you have to decide how to get downtown. What will you do?
         </p>
-        <span id="go-to-3a" type="button" class="btn">Take the Bus</span>
-        <span id="go-to-3b" type="button" class="btn">Take your Bike</span>
+        <div class="row">
+          <div class="col-md-6">
+            <img src="img/page 2a/bus.jpg" alt="a trimet bus">
+            <br>
+            <span id="go-to-3a" type="button" class="btn">Take the Bus</span>
+          </div>
+          <div class="col-md-6">
+            <img src="img/page 2a/bike-commute.jpg" alt="bike commuters">
+            <br>
+            <span id="go-to-3b" type="button" class="btn">Take your Bike</span>
+          </div>
+        </div>
         <hr>
       </div>
 
       <!-- Page 3A -->
       <div id="page-3a">
-        <h3>Page 3a</h3>
+        <h2>Page 3a</h2>
         <p>
           Congratulations, <span class="user-name"></span>, you took the bus! You can study while you ride, but you’ll have to spend some money. You have 40 minutes to get downtown.
         </p>
@@ -160,14 +174,14 @@
           <p>
             You’re downtown! Let’s get to Epicodus!
           </p>
-          <button type="submit" id="3a-go-to-4a">Enter the Building!</button>
+          <button type="submit" id="3a-go-to-4a" class="btn">Enter the Building!</button>
         </form>
         <hr>
       </div>
 
       <!-- Page 3B -->
       <div id="page-3b">
-        <h3>Page 3b</h3>
+        <h2>Page 3b</h2>
         <p>
           <span class="user-name"></span>, you are such a rockstar! You’re riding your bike to Epicodus. Points for fitness, but you might be a little sweaty when you arrive. You have 40 minutes to get downtown.
         </p>
@@ -211,23 +225,33 @@
           <p>
             Let’s get up to the 8th floor!
           </p>
-          <button type="submit" id="3b-go-to-4a">Go to the Lobby</button>
+          <button type="submit" id="3b-go-to-4a" class="btn">Go to the Lobby</button>
         </form>
         <hr>
       </div>
       <!-- Page 4 -->
-      <div id="page-4a">
-        <h3>Page 4</h3>
+      <div id="page-4a" class="branch-page">
+        <h2>Page 4</h2>
         <p>
           You’ve made it to the lobby, and now you have to decide how to get to the 8th floor. What will you choose?
         </p>
-        <span id="go-to-5a" type="button" class="btn">Take the Elevator</span>
-        <span id="go-to-5b" type="button" class="btn">Take the Stairs</span>
+        <div class="row">
+          <div class="col-md-6">
+            <img src="img/page 4a/elevators.jpg" alt="some elevators">
+            <br>
+            <span id="go-to-5a" type="button" class="btn">Take the Elevator</span>
+          </div>
+          <div class="col-md-6">
+            <img src="img/page 4a/stairs.jpg" alt="a stairwell">
+            <br>
+            <span id="go-to-5b" type="button" class="btn">Take the Stairs</span>
+          </div>
+        </div>
         <hr>
       </div>
       <!-- Page 5A -->
       <div id="page-5a">
-        <h3>Page 5a</h3>
+        <h2>Page 5a</h2>
         <p>
           Good job, <span class="user-name"></span>! You chose the elevator. Let's hope this is a smooth ride to the 8th floor! You have 10 minutes.
         </p>
@@ -271,13 +295,13 @@
           <p>
             After that ordeal, are you ready to find your partner?
           </p>
-          <button type="submit" id="5a-go-to-6a">Find a Partner</button>
+          <button type="submit" id="5a-go-to-6a" class="btn">Find a Partner</button>
         </form>
         <hr>
       </div>
       <!-- Page 5B -->
       <div id="page-5b">
-        <h3>Page 5b</h3>
+        <h2>Page 5b</h2>
         <p>
           You're such a badass, <span class="user-name"></span>! Not only do you know where the stairs are, you're also fit as a fiddle! Let's go! You have 10 minutes.
         </p>
@@ -321,14 +345,14 @@
           <p>
             After that ordeal, are you ready to find your partner?
           </p>
-          <button type="submit" id="5b-go-to-6a">Find a Partner</button>
+          <button type="submit" id="5b-go-to-6a" class="btn">Find a Partner</button>
         </form>
         <hr>
       </div>
 
       <!-- Page 6 ***BOSS*** -->
       <div id="page-6a">
-        <h3>Page 6 (Boss - worth 60 points)</h3>
+        <h2>Page 6 (Boss - worth 60 points)</h2>
         <p>
           You've made it to Epicodus, <span class="user-name"></span>! Now for the greatest challenge of the morning - finding your partner! You anxiously head towards the entrance to Epicodus. You have 10 minutes to find a partner.
         </p>
@@ -348,13 +372,13 @@
           <div class="form-group">
             <h3>Where do you begin your search for a partner?</h3>
             <div class="radio">
-              <label><input type="radio" name="time" value="60" required>You act like a gargoyle and guard the Epicodus door, asking everyone who passes to be your partner.</label>
+              <label><input type="radio" name="time" value="6" required>You act like a gargoyle and guard the Epicodus door, asking everyone who passes to be your partner.</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="time" value="15" required>You’re so exhausted that you sit on a couch and stare at your phone blankly.</label>
+              <label><input type="radio" name="time" value="0" required>You’re so exhausted that you sit on a couch and stare at your phone blankly.</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="time" value="35" required>You go to the kitchen and offer up some snacks to a full table, casually mentioning that you need a partner.</label>
+              <label><input type="radio" name="time" value="3" required>You go to the kitchen and offer up some snacks to a full table, casually mentioning that you need a partner.</label>
             </div>
           </div>
           <div class="form-group">
@@ -372,16 +396,16 @@
           <p>
             You've made it this far, but you're still not finished. Head to a computer and sign in!
           </p>
-          <button type="submit" id="go-to-7a">Go to Log In</button>
+          <button type="submit" id="go-to-7a" class="btn">Go to Log In</button>
         </form>
         <hr>
       </div>
 
       <!-- Page 7 -->
       <div id="page-7a">
-        <h3>Page 7</h3>
+        <h2>Page 7</h2>
         <p>
-        Yay, <span class="user-name"></span>, you’ve found your partner! You’re almost to the finish line… but not yet! You have 10 minutes until your login deadline. 
+        Yay, <span class="user-name"></span>, you’ve found your partner! You’re almost to the finish line… but not yet! You have 10 minutes until your login deadline.
         </p>
         <form id="page-7a-form">
           <div class="form-group">
@@ -423,13 +447,13 @@
           <p>
             Hooray, you finished! Let's see how you scored...
           </p>
-          <button type="submit" id="go-to-finish">Check Final Score</button>
+          <button type="submit" id="go-to-finish" class="btn">Check Final Score</button>
         </form>
         <hr>
       </div>
       <!-- Finish Page -->
       <div id="page-final">
-        <h3>Finish Page</h3>
+        <h2>Finish Page</h2>
         <!-- 0-100 	Not so good -->
         <div id="high-score">
           <h3>High Score</h3>

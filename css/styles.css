@@ -1,27 +1,52 @@
 /*General Styles*/
+
+
+/*font-family: 'Allerta Stencil', sans-serif;
+
+font-family: 'Quantico', sans-serif;
+
+font-family: 'Monoton', cursive;*/
+
 body {
   background-color: #b2b2b2;
+  font-family: 'Quantico', sans-serif;
 }
+
 h1 {
   color: #7D0505;
+  font-family: 'Monoton', cursive;
   font-size: 4em;
   text-align: center;
-  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 
 h2 {
   color: #7D0505;
-  text-align: center;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-family: 'Monoton', cursive;
+  text-decoration: underline;
 }
 
 h3 {
 
 }
 
-p {
-
+img {
+  border: 2px solid black;
+  max-width: 80%;
+  margin: 2vh 0;
 }
+
+li {
+  font-size: 1.3em;
+}
+
+p {
+  font-size: 1.3em;
+}
+
+ul {
+  list-style: none;
+}
+
 
 .btn {
   background-color: #7D0505;
@@ -35,30 +60,50 @@ p {
 }
 
 /*Scoreboard Styles*/
-#scoreboard-main {
-
+#scoreboard-header {
+  font-family: 'Allerta Stencil', sans-serif;
+  margin-top: 3vh;
 }
 
-#scoreboard-page {
-
+.scoreboard-page-box {
+  border: 5px solid black;
+  background-color: #fffefe;
+  max-width: 80%;
+  min-height: 200px;
+  margin: auto;
+  padding-left: 10%;
+  margin-bottom: 5%;
 }
 
 /*Page Styles*/
 .user-name {
+  color: #7D0505;
+}
 
+/*Branch Page Styles*/
+.branch-page{
+  text-align: center;
 }
 
 /*Landing Page Styles*/
+#landing-page h2 {
+  color: #7D0505;
+  font-family: 'Quantico', sans-serif;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
 #landing-page img {
   max-width: 60vw;
   display: block;
   margin: auto;
-  border: 5px solid #7D0505;
+  border: 5px solid black;
 }
 #get-user-name {
   text-align: center;
   background-color: #fffefe;
-  border: 5px solid #7D0505;
+  border: 5px solid black;
   padding-top: 2vh;
   max-width: 50vw;
   display: block;

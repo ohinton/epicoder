@@ -3,7 +3,7 @@ var newPlayer = {};
 function Player(name) {
   this.playerName = name;
   this.playerFocus = 0;
-  this.playerTime = 300;
+  this.playerTime = 100;
   this.playerMoney = 0;
   this.playerScore = 0;
 }
@@ -73,10 +73,15 @@ $(document).ready(function() {
     //display scores from this page
     updatePageScores(focus, time, money);
     //calculate new player scores for focus, time, money and total score
+
+    newPlayer.playerTime -= 30;
+    console.log(newPlayer.playerTime);
+
     newPlayer.calculateFocus(focus);
     newPlayer.calculateTime(time);
     newPlayer.calculateMoney(money);
     newPlayer.calculateScore();
+    console.log(newPlayer.playerTime);
 
     updateScoreboard();
 

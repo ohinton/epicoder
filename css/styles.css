@@ -1,9 +1,12 @@
-.btn {
-
-}
+/*General Styles*/
 
 h1 {
+  font-size: 4em;
+  text-align: center;
+}
 
+h2 {
+  text-align: center;
 }
 
 h3 {
@@ -14,6 +17,11 @@ p {
 
 }
 
+.btn {
+
+}
+
+/*Scoreboard Styles*/
 #scoreboard-main {
 
 }
@@ -22,9 +30,29 @@ p {
 
 }
 
+/*Page Styles*/
 .user-name {
-  
+
 }
+
+/*Landing Page Styles*/
+#landing-page img {
+  max-width: 80vw;
+  display: block;
+  margin: auto;
+  border: 3px solid red;
+}
+#get-user-name {
+  text-align: center;
+}
+
+
+
+
+
+
+
+
 
 /*#page-1, #page-2, #page-3a, #page-3b, #page-4, #page-5a, #page-5b, #page-6, #page-7, #final-page, #low-score, #medium-score, #high-score {
   display: none;

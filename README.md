@@ -1,4 +1,4 @@
-# _Epicoder GAme_
+# _Epicoder Game_
 
 #### By _Olivia Hinton, Noah Yasskin, Stephanie Gurung and Maldon Meehan | Date: June 20, 2016_
 
@@ -11,20 +11,11 @@ _A choose your own adventure game: How to get to Epicodus._
 | Behavior        | Input           | Outcome  |
 | ------------- |:-------------:| -----:|
 | A user inputs their name | Mike | Welcome to Epicodus, Mike
-| A user have a varaity of options for their adventure | choose: Wake up earily | gain 10 focus points
+| A user have a variety of options for their adventure | choose: Wake up early | gain 10 focus points
 | A user can choose one of two travel options | choose: take the bus | taken to take the bus page
-| A user can choose one of two travel options | choose: take the bus | taken to take the bus page
-
-
-## Style Sheet
-
-* _function Pet (name, type, age, description, availability) {
-  this.petName = name;
-  this.petType = type;
-  this.petAge = age;
-  this.petDescription = description;
-  this.petAvailability = availability;_
-* _form IDs: (form)#new-pet | #new-pet-name, #new-pet-type, #new-pet-description, #new-pet-availability_
+| A user can see their updates score on the scoreboard.| click the choices | Total score: 20
+| A user can see their round score on the scoreboard. | click the choices | Round total: 10 Total score: 30
+| A user can see feedback on their final score. | Click final challenge | Good Job, You're a great Epicoder
 
 ## Setup/Installation Requirements
 

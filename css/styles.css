@@ -40,6 +40,14 @@ font-family: 'Monoton', cursive;*/
 }*/
 
 
+#focus-loser, #time-loser, #money-loser {
+  display: none;
+}
+
+#scoreboard-header {
+  display: none;
+}
+
 body {
   background-color: #EDEECB;
   font-family: 'Quantico', sans-serif;

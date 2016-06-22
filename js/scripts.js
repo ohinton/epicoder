@@ -29,7 +29,7 @@ function updateScoreboard (name, focus, time, money, score) {
   var time = newPlayer.playerTime;
   var hours = Math.floor(time / 60);
   var minutes = time % 60;
-  $(".scoreboard-time").text(hours + " hour & " + minutes + " minutes remaining");
+  $(".scoreboard-time").text(hours + " hour & " + minutes + " minutes");
   var money = newPlayer.playerMoney.toFixed(2);
   $(".scoreboard-money").text(money);
   $(".scoreboard-score").text(newPlayer.playerScore);

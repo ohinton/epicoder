@@ -6,7 +6,7 @@
 font-family: 'Quantico', sans-serif;
 
 font-family: 'Monoton', cursive;*/
-
+/*
 #page-10a, #page-11a, #page-12a, #page-13a {
   display: none;
 }
@@ -35,9 +35,10 @@ font-family: 'Monoton', cursive;*/
   display: none;
 }
 
-#page-final, #low-score, #medium-score, #high-score {
+#page-final, #low-score, #medium-score, #high-score, #instruction-page, #money-loser, #focus-loser, #time-loser, #scoreboard-header{
   display: none;
-}
+}*/
+
 
 #focus-loser, #time-loser, #money-loser {
   display: none;
@@ -48,7 +49,7 @@ font-family: 'Monoton', cursive;*/
 }
 
 body {
-  background-color: #b2b2b2;
+  background-color: #EDEECB;
   font-family: 'Quantico', sans-serif;
 }
 
@@ -61,21 +62,33 @@ h1 {
 
 h2 {
   color: #7D0505;
-  font-family: 'Monoton', cursive;
+  font-family: 'Quantico', sans-serif;
   text-decoration: underline;
+  text-align: center;
+}
+
+.header {
+  text-decoration: underline;
+  font-family: 'Monoton', cursive;
 }
 
 h3 {
-
+  color: #7D0505;
+  text-decoration: underline;
 }
 
 img {
-  border: 2px solid black;
   max-width: 80%;
-  margin: 2vh 0;
+  display: block;
+  margin: 5% auto;
+  border: 5px solid black;
 }
 
 li {
+  font-size: 1.3em;
+}
+
+label {
   font-size: 1.3em;
 }
 
@@ -83,20 +96,45 @@ p {
   font-size: 1.3em;
 }
 
+strong {
+  color: #7D0505;
+}
+
 ul {
   list-style: none;
 }
 
-
 .btn {
+  color: #b2b2b2;
   background-color: #7D0505;
-  color: #EDEECB;
-  font-weight: bold;
   border: 1px solid black;
+  font-family: 'Monoton', cursive;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-left: 10px;
+  min-width: 200px;
+  display: block;
+  margin: auto;
 }
 
 .btn:hover {
-  color:  #595959;
+  color:  black;
+}
+
+.container {
+  max-width: 1000px;
+}
+
+.first-letter {
+  font-family: 'Monoton', cursive;
+  color: #7D0505;
+  font-size: 3em;
+}
+
+/*Jumbotron Styles*/
+.jumbotron {
+  background-color: #7D0505;
+  color: #b2b2b2;
 }
 
 /*Scoreboard Styles*/
@@ -105,68 +143,55 @@ ul {
   margin-top: 3vh;
 }
 
-#scoreboard-page {
-  display: none;
-}
-
 /*Page Styles*/
-.user-name {
-  color: #7D0505;
-}
-
 .output-color {
-  color: red;
-}
-
-.output-color-page {
-  color: green;
-}
-
-.scoreboard-page-box {
-  border: 5px solid black;
-  background-color: #fffefe;
-  max-width: 80%;
-  min-height: 200px;
-  margin: auto;
-  padding-left: 10%;
-  margin-bottom: 5%;
-}
-
-#scoreboard-page {
-  display: none;
-}
-
-/*Page Styles*/
-.user-name {
   color: #7D0505;
 }
 
-/*Branch Page Styles*/
-.branch-page{
-  text-align: center;
+.user-name {
+  color: #7D0505;
+  text-align: left;
+}
+
+/*Scoreboard Header Styles*/
+.nav-tabs li {
+  margin-left: 20px;
 }
 
 /*Landing Page Styles*/
+#landing-page .btn {
+    font-size: .8em;
+    margin-top: 5px;
+}
+
 #landing-page h2 {
   color: #7D0505;
   font-family: 'Quantico', sans-serif;
+  font-size: 3em;
   text-align: center;
   text-decoration: none;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-#landing-page img {
+#landing-page img, #instruction-page img {
   max-width: 60vw;
   display: block;
-  margin: auto;
+  margin: 0 auto 20px;
   border: 5px solid black;
 }
+
 #get-user-name {
   text-align: center;
   background-color: #fffefe;
   border: 5px solid black;
+  font-size: 1.5em;
   padding-top: 2vh;
   max-width: 50vw;
   display: block;
   margin: auto;
+}
+
+/*Branch Page Styles*/
+.branch-page{
+  text-align: center;
 }

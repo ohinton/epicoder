@@ -26,9 +26,11 @@ Player.prototype.calculateScore = function () {
 function updateScoreboard (name, focus, time, money, score) {
   $(".user-name").text(newPlayer.playerName);
   $(".scoreboard-focus").text(newPlayer.playerFocus);
+
   var t = newPlayer.playerTime;
   var hours = Math.floor(t / 60);
   var minutes = t % 60;
+
   $(".scoreboard-time").text(hours + " hour & " + minutes + " minutes");
   var money = newPlayer.playerMoney.toFixed(2);
   $(".scoreboard-money").text("$" + money);

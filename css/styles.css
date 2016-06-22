@@ -7,6 +7,38 @@ font-family: 'Quantico', sans-serif;
 
 font-family: 'Monoton', cursive;*/
 
+#page-10a, #page-11a, #page-12a, #page-13a {
+  display: none;
+}
+
+#page-20a {
+  display: none;
+}
+
+#page-30a, #page-31a, #page-32a, #page-33a, #page-30b, #page-31b, #page-32b, #page-33b  {
+  display: none;
+}
+
+#page-40a {
+  display: none;
+}
+
+#page-50a, #page-51a, #page-52a, #page-53a, #page-50b, #page-51b, #page-52b, #page-53b {
+  display: none;
+}
+
+#page-60a, #page-61a, #page-62a, #page-63a  {
+  display: none;
+}
+
+#page-70a, #page-71a, #page-72a, #page-73a {
+  display: none;
+}
+
+#page-final, #low-score, #medium-score, #high-score {
+  display: none;
+}
+
 body {
   background-color: #b2b2b2;
   font-family: 'Quantico', sans-serif;
@@ -130,11 +162,3 @@ ul {
   display: block;
   margin: auto;
 }
-
-#scoreboard-page {
-  display: none;
-}
-
-/*#page-1a, #page-2a, #page-3a, #page-3b, #page-4a, #page-5a, #page-5b, #page-6a, #page-7a, #page-final, #low-score, #medium-score, #high-score {
-  display: none;
-}*/

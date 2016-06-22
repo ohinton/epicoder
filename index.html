@@ -21,7 +21,7 @@
           <div class="form-group">
             <label for="new-user-name">Please enter your name:</label>
             <input type="text" id="new-user-name" required>
-            <button type="submit" id="go-to-1" class="btn">Let's Begin!</button>
+            <button type="submit" id="go-to-10a" class="btn">Let's Begin!</button>
           </div>
         </form>
         <hr>
@@ -34,82 +34,108 @@
           <div class="scoreboard-page-box">
             <h3>Scoreboard</h3>
             <ul>
-              <li>name: <span class="user-name"></span></li>
-              <li>focus: <span class="scoreboard-focus"></span></li>
-              <li>time: <span class="scoreboard-time"></span></li>
-              <li>money: <span class="scoreboard-money"></span></li>
-              <li>total score: <span class="scoreboard-score"></span></li>
+              <li>name: <span class="user-name output-color" ></span></li>
+              <li>focus: <span class="scoreboard-focus output-color"></span></li>
+              <li>time left: <span class="scoreboard-time output-color"></span></li>
+              <li>money left: <span class="scoreboard-money output-color"></span></li>
+              <li>total score: <span class="scoreboard-score output-color"></span></li>
             </ul>
           </div>
         </div>
         <!-- Page Scoreboard -->
-        <div id="scoreboard-page" class="col-md-6">
+        <!-- <div id="scoreboard-page" class="col-md-6">
           <div class="scoreboard-page-box">
             <h3>For your last challenge,</h3>
             <ul>
-              <li>you earned <span class="page-focus"></span> points of focus</li>
-              <li>you saved <span class="page-time"></span> minutes</li>
-              <li>you saved <span class="page-money"></span> dollars</li>
-              <li>you earned a total of <span class="page-score"></span></li>
+              <li>you earned <span class="page-focus output-color-page"></span> points of focus</li>
+              <li>you saved <span class="page-time output-color-page"></span> minutes</li>
+              <li>you saved <span class="page-money output-color-page"></span> dollars</li>
+              <li>you earned a total of <span class="page-score output-color-page"></span> points!</li>
             </ul>
           </div>
-        </div>
+        </div> -->
       </div>
 
-      <!-- Page 1 -->
-      <div id="page-1a">
-        <h2>Page 1</h2>
+      <!-- Page 10a -->
+      <div id="page-10a">
+        <h2>Let's  Begin</h2>
         <p>
           Good morning, <span class="user-name"></span>! Sleep and breakfast are very important parts of the day. Choose how you will spend your night and morning wisely! You usually take around 30 minutes to get ready and leave the house. Can you save some time this morning?
         </p>
-        <form id="page-1a-form">
+        <button type="button" id="go-to-11a" class="btn">Let's Go!</button>
+        <hr>
+      </div>
+      <!-- page 11a -->
+      <div id="page-11a">
+        <form id="page-11a-form">
           <div class="form-group">
             <h3>Last Night</h3>
             <div class="radio">
               <label><input type="radio" name="focus" value="3" checked>You went out drinking with your new JS class buddies, and got home super late.</label>
             </div>
             <div class="radio">
+<<<<<<< HEAD
               <label><input type="radio" name="focus" value="10" >You looked ahead at the next day’s lesson and started doing some work, and then went to bed at 11 pm.</label>
             </div>
             <div class="radio">
               <label><input type="radio" name="focus" value="6" >You showered and packed your lunch, but you didn't make it to bed until midnight.</label>
+=======
+              <label><input type="radio" name="focus" value="10">You looked ahead at the next day’s lesson and started doing some work, and then went to bed at 11 pm.</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="focus" value="6">You showered and packed your lunch, but you didn't make it to bed until midnight.</label>
+>>>>>>> master
             </div>
           </div>
+          <button type="submit" id="go-to-12a" class="btn">Turn the Page</button>
+        </form>
+        <hr>
+      </div>
+      <!-- Page 12a -->
+      <div id="page-12a">
+        <form id="page-12a-form">
           <div class="form-group">
             <h3>Wake Up!</h3>
             <div class="radio">
               <label><input type="radio" name="time" value="6" checked>You hit the snooze for 5 minutes, but then you jump out of bed.</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="time" value="10" >You jump straight out of bed in the morning, wide awake.</label>
+              <label><input type="radio" name="time" value="10">You jump straight out of bed in the morning, wide awake.</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="time" value="3" >You really want to sleep in, so you hit the snooze 3 times.</label>
+              <label><input type="radio" name="time" value="3">You really want to sleep in, so you hit the snooze 3 times.</label>
             </div>
           </div>
+          <button type="submit" id="go-to-13a" class="btn">Turn the Page</button>
+        </form>
+        <hr>
+      </div>
+      <!-- Page 13a -->
+      <div id="page-13a">
+        <form id="page-13a-form">
           <div class="form-group">
             <h3>Breakfast Time</h3>
             <div class="radio">
               <label><input type="radio" name="money" value="3" checked>You grab breakfast on the run.</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="money" value="10" >You pack a breakfast that you’ll eat at Epicodus.</label>
+              <label><input type="radio" name="money" value="10">You pack a breakfast that you’ll eat at Epicodus.</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="money" value="6" >You cook up and eat a full breakfast at home.</label>
+              <label><input type="radio" name="money" value="6">You cook up and eat a full breakfast at home.</label>
             </div>
           </div>
           <p>
             Time to leave the house!
           </p>
-          <button type="submit" id="go-to-2a" class="btn">Leave the House</button>
+          <button type="submit" id="go-to-20a" class="btn">Leave the House</button>
         </form>
         <hr>
       </div>
 
-      <!-- Page 2 -->
-      <div id="page-2a" class="branch-page">
-        <h2>Page 2</h2>
+      <!-- Page 20a (Branch Page)-->
+      <div id="page-20a" class="branch-page">
+        <h2>Transportation</h2>
         <p>
           You’re out of the house and now you have to decide how to get downtown. What will you do?
         </p>
@@ -117,121 +143,160 @@
           <div class="col-md-6">
             <img src="img/page 2a/bus.jpg" alt="a trimet bus">
             <br>
-            <span id="go-to-3a" type="button" class="btn">Take the Bus</span>
+            <span id="go-to-30a" type="button" class="btn">Take the Bus</span>
           </div>
           <div class="col-md-6">
             <img src="img/page 2a/bike-commute.jpg" alt="bike commuters">
             <br>
-            <span id="go-to-3b" type="button" class="btn">Take your Bike</span>
+            <span id="go-to-30b" type="button" class="btn">Take your Bike</span>
           </div>
         </div>
         <hr>
       </div>
 
-      <!-- Page 3A -->
-      <div id="page-3a">
-        <h2>Page 3a</h2>
+      <!-- Page 30A -->
+      <div id="page-30a">
+        <h2>The  Bus  Ride</h2>
         <p>
           Congratulations, <span class="user-name"></span>, you took the bus! You can study while you ride, but you’ll have to spend some money. You have 40 minutes to get downtown.
         </p>
-        <form id="page-3a-form">
+        <button type="button" id="go-to-31a" class="btn">Let's Go!</button>
+        <hr>
+      </div>
+      <!-- page 31a -->
+      <div id="page-31a">
+        <form id="page-31a-form">
           <div class="form-group">
             <h3>You can’t find your monthly bus pass, what do you do?</h3>
             <div class="radio">
-              <label><input type="radio" name="money" value="3" required>You don’t have exact change, so you have to buy a day pass with a ten dollar bill. </label>
+              <label><input type="radio" name="money" value="3" checked>You don’t have exact change, so you have to buy a day pass with a ten dollar bill. </label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="money" value="10" required>You beg the bus driver to let you on.</label>
+              <label><input type="radio" name="money" value="10">You beg the bus driver to let you on.</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="money" value="6" required>You have no money, so you have to get out and walk.</label>
+              <label><input type="radio" name="money" value="6">You have no money, so you have to get out and walk.</label>
             </div>
           </div>
+          <button type="submit" id="go-to-32a" class="btn">Turn the Page</button>
+        </form>
+        <hr>
+      </div>
+        <!-- page 32a -->
+      <div id="page-32a">
+        <form id="page-32a-form">
           <div class="form-group">
             <h3>The bus is super crowded, what should you do?</h3>
             <div class="radio">
-              <label><input type="radio" name="focus" value="6" required>You try studying the Epicodus curriculum while you stand.</label>
+              <label><input type="radio" name="focus" value="6" checked>You try studying the Epicodus curriculum while you stand.</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="focus" value="10" required>You take the only seat available, before an elderly woman gets to it.</label>
+              <label><input type="radio" name="focus" value="10">You take the only seat available, before an elderly woman gets to it.</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="focus" value="3" required>You end up standing between two friends who are animatedly talking about the basketball game last night.</label>
+              <label><input type="radio" name="focus" value="3">You end up standing between two friends who are animatedly talking about the basketball game last night.</label>
             </div>
           </div>
+          <button type="submit" id="go-to-33a" class="btn">Turn the Page</button>
+        </form>
+        <hr>
+      </div>
+
+        <!-- page 33a -->
+      <div id="page-33a">
+        <form id="page-33a-form">
           <div class="form-group">
             <h3>It’s fleet week, and the bridge is up!</h3>
             <div class="radio">
-              <label><input type="radio" name="time" value="10" required>Fleet week? No problem, you planned ahead and got an early bus.</label>
+              <label><input type="radio" name="time" value="10" checked>Fleet week? No problem, you planned ahead and got an early bus.</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="time" value="6" required>You spend your extra time networking with a Nike employee, and get their business card.</label>
+              <label><input type="radio" name="time" value="6">You spend your extra time networking with a Nike employee, and get their business card.</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="time" value="3" required>You take the opportunity to get in a quick cat nap.</label>
+              <label><input type="radio" name="time" value="3">You take the opportunity to get in a quick cat nap.</label>
             </div>
           </div>
           <p>
             You’re downtown! Let’s get to Epicodus!
           </p>
-          <button type="submit" id="3a-go-to-4a" class="btn">Enter the Building!</button>
+          <button type="submit" id="33a-go-to-40a" class="btn">Enter the Building!</button>
         </form>
         <hr>
       </div>
 
-      <!-- Page 3B -->
-      <div id="page-3b">
-        <h2>Page 3b</h2>
+      <!-- Page 30B -->
+      <div id="page-30b">
+        <h2>On  Your  Bike</h2>
         <p>
           <span class="user-name"></span>, you are such a rockstar! You’re riding your bike to Epicodus. Points for fitness, but you might be a little sweaty when you arrive. You have 40 minutes to get downtown.
         </p>
-        <form id="page-3b-form">
+        <button type="button" id="go-to-31a" class="btn">Let's Go!</button>
+        <hr>
+      </div>
+      <!-- page 31b -->
+      <div id="page=31b">
+        <form id="page-31b-form">
           <div class="form-group">
             <h3>What do you do while you ride your bike?</h3>
             <div class="radio">
-              <label><input type="radio" name="focus" value="6" required>You listen to treehouse on your smart phone.</label>
+              <label><input type="radio" name="focus" value="6" checked>You listen to treehouse on your smart phone.</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="focus" value="10" required>You focus on getting your morning workout in while you clear your head before class.</label>
+              <label><input type="radio" name="focus" value="10">You focus on getting your morning workout in while you clear your head before class.</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="focus" value="3" required>You yell at passing cars and pedestrians as you fly by them.</label>
+              <label><input type="radio" name="focus" value="3">You yell at passing cars and pedestrians as you fly by them.</label>
             </div>
           </div>
+        </form>
+        <button type="submit" id="go-to-32b" class="btn">Turn the Page</button>
+        <hr>
+      </div>
+      <!-- page 32b -->
+      <div id="page-32b">
+        <form id="page-32b-form">
           <div class="form-group">
             <h3>You get a flat tire! What do you do?</h3>
             <div class="radio">
-              <label><input type="radio" name="money" value="10" required>You have a tire kit in your bag, so you fix the flat and go on your way.</label>
+              <label><input type="radio" name="money" value="10" checked>You have a tire kit in your bag, so you fix the flat and go on your way.</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="money" value="6" required>You phone AAA to come get you, however it's going to be over an hour, so you have to throw your bike on the nearest bus.</label>
+              <label><input type="radio" name="money" value="6">You phone AAA to come get you, however it's going to be over an hour, so you have to throw your bike on the nearest bus.</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="money" value="3" required>You push your bike the whole way to Epicodus.</label>
+              <label><input type="radio" name="money" value="3">You push your bike the whole way to Epicodus.</label>
             </div>
           </div>
+        </form>
+        <button type="submit" id="go-to-33b" class="btn">Turn the Page</button>
+        <hr>
+      </div>
+        <!-- page 33b -->
+      <div id="page-33b">
+        <form id="page-33b-form">
           <div class="form-group">
             <h3>You arrive to Epicodus, and you need to park your bike. What do you do?</h3>
             <div class="radio">
-              <label><input type="radio" name="time" value="3" required>You ride your bike down the hall, and the security guard stops and scolds you.</label>
+              <label><input type="radio" name="time" value="3" checked>You ride your bike down the hall, and the security guard stops and scolds you.</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="time" value="10" required>You calmly walk your bike to the vault and lock it.</label>
+              <label><input type="radio" name="time" value="10">You calmly walk your bike to the vault and lock it.</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="time" value="6" required>You take your bike down the regular elevator, jeopardizing Epicoudus’ lease.</label>
+              <label><input type="radio" name="time" value="6">You take your bike down the regular elevator, jeopardizing Epicoudus’ lease.</label>
             </div>
           </div>
           <p>
             Let’s get up to the 8th floor!
           </p>
-          <button type="submit" id="3b-go-to-4a" class="btn">Go to the Lobby</button>
+          <button type="submit" id="33b-go-to-40a" class="btn">Go to the Lobby</button>
         </form>
         <hr>
       </div>
-      <!-- Page 4 -->
-      <div id="page-4a" class="branch-page">
-        <h2>Page 4</h2>
+      <!-- Page 40a -->
+      <div id="page-40a" class="branch-page">
+        <h2>Stairs  or Elevator:  A  Difficult  Decision</h2>
         <p>
           You’ve made it to the lobby, and now you have to decide how to get to the 8th floor. What will you choose?
         </p>
@@ -239,209 +304,288 @@
           <div class="col-md-6">
             <img src="img/page 4a/elevators.jpg" alt="some elevators">
             <br>
-            <span id="go-to-5a" type="button" class="btn">Take the Elevator</span>
+            <span id="go-to-50a" type="button" class="btn">Take the Elevator</span>
           </div>
           <div class="col-md-6">
             <img src="img/page 4a/stairs.jpg" alt="a stairwell">
             <br>
-            <span id="go-to-5b" type="button" class="btn">Take the Stairs</span>
+            <span id="go-to-50b" type="button" class="btn">Take the Stairs</span>
           </div>
         </div>
         <hr>
       </div>
-      <!-- Page 5A -->
-      <div id="page-5a">
-        <h2>Page 5a</h2>
+      <!-- Page 50a -->
+      <div id="page-50a">
+        <h2>The  Elevator  Escapades</h2>
         <p>
           Good job, <span class="user-name"></span>! You chose the elevator. Let's hope this is a smooth ride to the 8th floor! You have 10 minutes.
         </p>
-        <form id="page-5a-form">
+        <button type="button" id="go-to-51a" class="btn">Let's Go!</button>
+        <hr>
+      </div>
+      <!-- page 51a -->
+      <div id="page-51a">
+        <form id="page-51a-form">
           <div class="form-group">
             <h3>You suddenly realize you’re craving coffee. What do you do?</h3>
             <div class="radio">
-              <label><input type="radio" name="money" value="10" required>You are super prepared and you already brought some.</label>
+              <label><input type="radio" name="money" value="10" checked>You are super prepared and you already brought some.</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="money" value="3" required>You run to Starbucks and order a non-fat frappuccino with extra whipped cream and chocolate sauce.</label>
+              <label><input type="radio" name="money" value="3">You run to Starbucks and order a non-fat frappuccino with extra whipped cream and chocolate sauce.</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="money" value="6" required>You decide to go for the best part of waking up, Folgers, in the Epicodus kitchen. </label>
+              <label><input type="radio" name="money" value="6">You decide to go for the best part of waking up, Folgers, in the Epicodus kitchen. </label>
             </div>
           </div>
-          <div class="form-group">
-            <h3>You get off on the UTI floor. Whoops!</h3>
-            <div class="radio">
-              <label><input type="radio" name="time" value="6" required>You grow impatient and run up the last two flights to the 8th floor.</label>
-            </div>
-            <div class="radio">
-              <label><input type="radio" name="time" value="3" required>You start up a conversation with a UTI employee and learn that UTI is not a medical issue, but actually is a transportation company that wants to hire you when you graduate. </label>
-            </div>
-            <div class="radio">
-              <label><input type="radio" name="time" value="10" required>You wait for the next elevator and continue on your journey.</label>
-            </div>
-          </div>
-          <div class="form-group">
-            <h3>The elevator gets stuck. Help! </h3>
-            <div class="radio">
-              <label><input type="radio" name="focus" value="10" required>You whip out your javascript book that you got from the library and start studying like a mad coding machine while you wait for the fire fighters to arrive.</label>
-            </div>
-            <div class="radio">
-              <label><input type="radio" name="focus" value="3" required>Panic sets in. You wonder if you’ll ever get out and log in on time. You cry softly in the corner.</label>
-            </div>
-            <div class="radio">
-              <label><input type="radio" name="focus" value="6" required>You bond with your fellow epicodus students during this terrifying experience.</label>
-            </div>
-          </div>
-          <p>
-            After that ordeal, are you ready to find your partner?
-          </p>
-          <button type="submit" id="5a-go-to-6a" class="btn">Find a Partner</button>
+          <button type="submit" id="go-to-52a" class="btn">Turn the Page</button>
         </form>
         <hr>
       </div>
-      <!-- Page 5B -->
-      <div id="page-5b">
-        <h2>Page 5b</h2>
-        <p>
-          You're such a badass, <span class="user-name"></span>! Not only do you know where the stairs are, you're also fit as a fiddle! Let's go! You have 10 minutes.
-        </p>
-        <form id="page-5b-form">
-            <div class="form-group">
-              <h3>You suddenly realize you’re craving coffee. What do you do?</h3>
-              <div class="radio">
-                <label><input type="radio" name="money" value="10" required>You are super prepared and you already brought some.</label>
-              </div>
-              <div class="radio">
-                <label><input type="radio" name="money" value="3" required>You run to Starbucks and order a non-fat frappuccino with extra whipped cream and chocolate sauce.</label>
-              </div>
-              <div class="radio">
-                <label><input type="radio" name="money" value="6" required>You decide to go for the best part of waking up, Folgers, in the Epicodus kitchen. </label>
-              </div>
-            </div>
+      <!-- page 52a -->
+      <div id="page-52a">
+        <form id="page-52a-form">
           <div class="form-group">
-            <h3>How do you best use your time while in the stairwell?</h3>
+            <h3>You get off on the UTI floor. Whoops!</h3>
             <div class="radio">
-              <label><input type="radio" name="focus" value="6" required>By floor 5, you’re breathing pretty heavily, so you sit down and eat a snack before continuing on.</label>
+              <label><input type="radio" name="time" value="6" checked>You grow impatient and run up the last two flights to the 8th floor.</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="focus" value="10" required>You review git commands in your head as you boldly bound up the stairs.</label>
+              <label><input type="radio" name="time" value="3">You start up a conversation with a UTI employee and learn that UTI is not a medical issue, but actually is a transportation company that wants to hire you when you graduate. </label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="focus" value="3" required>By floor 6, you’re exhausted, so you say forget it and hop on the elevator.</label>
+              <label><input type="radio" name="time" value="10">You wait for the next elevator and continue on your journey.</label>
             </div>
           </div>
+          <button type="submit" id="go-to-53a" class="btn">Turn the Page</button>
+        </form>
+        <hr>
+      </div>
+      <!-- page 53a -->
+      <div id="page-53a">
+        <form id="page-53a">
           <div class="form-group">
-            <h3>Uh oh! The entire staff of the 9th floor is doing a fire drill and streaming down the stairs. What to do?</h3>
+            <h3>The elevator gets stuck. Help! </h3>
             <div class="radio">
-              <label><input type="radio" name="time" value="10" required>Using some evasive maneuvering, you escape from the crowd and hop on the 3rd floor elevator.</label>
+              <label><input type="radio" name="focus" value="10" checked>You whip out your javascript book that you got from the library and start studying like a mad coding machine while you wait for the fire fighters to arrive.</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="time" value="6" required>You wait for the 9th floor staff to pass and take a breather, then continue up the stairs.</label>
+              <label><input type="radio" name="focus" value="3">Panic sets in. You wonder if you’ll ever get out and log in on time. You cry softly in the corner.</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="time" value="3" required>You channel your inner UFC fighter, try to force your way up the stairs, and get arrested.</label>
-            </div> required
+              <label><input type="radio" name="focus" value="6">You bond with your fellow epicodus students during this terrifying experience.</label>
+            </div>
           </div>
           <p>
             After that ordeal, are you ready to find your partner?
           </p>
-          <button type="submit" id="5b-go-to-6a" class="btn">Find a Partner</button>
+          <button type="submit" id="53a-go-to-60a" class="btn">Find a Partner</button>
         </form>
         <hr>
       </div>
 
-      <!-- Page 6 ***BOSS*** -->
-      <div id="page-6a">
-        <h2>Page 6 (Boss - worth 60 points)</h2>
+      <!-- Page 50B -->
+      <div id="page-50b">
+        <h2>The  Stair  Saga</h2>
+        <p>
+          You're such a badass, <span class="user-name"></span>! Not only do you know where the stairs are, you're also fit as a fiddle! Let's go! You have 10 minutes.
+        </p>
+        <button type="button" id="go-to-51b" class="btn">Let's Go!</button>
+        <hr>
+      </div>
+      <!-- page 51b -->
+      <div id="page-51b">
+        <form id=page-51b-form>
+          <div class="form-group">
+            <h3>You suddenly realize you’re craving coffee. What do you do?</h3>
+            <div class="radio">
+              <label><input type="radio" name="money" value="10" checked>You are super prepared and you already brought some.</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="money" value="3">You run to Starbucks and order a non-fat frappuccino with extra whipped cream and chocolate sauce.</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="money" value="6">You decide to go for the best part of waking up, Folgers, in the Epicodus kitchen. </label>
+            </div>
+          </div>
+          <button type="submit" id="go-to-52b" class="btn">Turn the Page</button>
+        </form>
+        <hr>
+      </div>
+      <!-- page 52b -->
+      <div id="page-52b">
+        <form id="page-52b-form">
+          <div class="form-group">
+            <h3>How do you best use your time while in the stairwell?</h3>
+            <div class="radio">
+              <label><input type="radio" name="focus" value="6" checked>By floor 5, you’re breathing pretty heavily, so you sit down and eat a snack before continuing on.</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="focus" value="10">You review git commands in your head as you boldly bound up the stairs.</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="focus" value="3">By floor 6, you’re exhausted, so you say forget it and hop on the elevator.</label>
+            </div>
+          </div>
+          <button type="submit" id="go-to-53b" class="btn">Turn the Page</button>
+        </form>
+        <hr>
+      </div>
+      <!-- page 53b -->
+      <div id="page-53b">
+        <form id="page-53b-form">
+          <div class="form-group">
+            <h3>Uh oh! The entire staff of the 9th floor is doing a fire drill and streaming down the stairs. What to do?</h3>
+            <div class="radio">
+              <label><input type="radio" name="time" value="10" checked>Using some evasive maneuvering, you escape from the crowd and hop on the 3rd floor elevator.</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="time" value="6">You wait for the 9th floor staff to pass and take a breather, then continue up the stairs.</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="time" value="3">You channel your inner UFC fighter, try to force your way up the stairs, and get arrested.</label>
+            </div>
+          </div>
+          <p>
+            After that ordeal, are you ready to find your partner?
+          </p>
+          <button type="submit" id="53b-go-to-60a" class="btn">Find a Partner</button>
+        </form>
+        <hr>
+      </div>
+
+
+      <!-- Page 60a ***BOSS*** -->
+      <div id="page-60a">
+        <h2>The  Partner  Predicament</h2>
         <p>
           You've made it to Epicodus, <span class="user-name"></span>! Now for the greatest challenge of the morning - finding your partner! You anxiously head towards the entrance to Epicodus. You have 10 minutes to find a partner.
         </p>
-        <form id="page-6a-form">
+        <button type="button" id="go-to-61a" class="btn">Let's Go!</button>
+        <hr>
+      </div>
+      <!-- page 61a -->
+      <div id="page-61a">
+        <form id="page-61a-form">
           <div class="form-group">
             <h3>How prepared are you for today’s lesson?</h3>
             <div class="radio">
-              <label><input type="radio" name="focus" value="15" required>You’re still figuring out how to log in to treehouse.</label>
+              <label><input type="radio" name="focus" value="15" checked>You’re still figuring out how to log in to treehouse.</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="focus" value="60" required>You’ve watched the entire Treehouse deep dive on today’s topic, you’ve completed the homework, and you’ve looked ahead at today’s lesson.</label>
+              <label><input type="radio" name="focus" value="60">You’ve watched the entire Treehouse deep dive on today’s topic, you’ve completed the homework, and you’ve looked ahead at today’s lesson.</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="focus" value="35" required>You’ve scanned the homework, and you’re feeling pretty confident.</label>
+              <label><input type="radio" name="focus" value="35">You’ve scanned the homework, and you’re feeling pretty confident.</label>
             </div>
           </div>
+          <button type="submit" id="go-to-62a" class="btn">Turn the Page</button>
+        </form>
+        <hr>
+      </div>
+      <!-- page 62a -->
+      <div id="page-62a">
+        <form id="page-62a-form">
           <div class="form-group">
             <h3>Where do you begin your search for a partner?</h3>
             <div class="radio">
-              <label><input type="radio" name="time" value="6" required>You act like a gargoyle and guard the Epicodus door, asking everyone who passes to be your partner.</label>
+              <label><input type="radio" name="time" value="6" checked>You act like a gargoyle and guard the Epicodus door, asking everyone who passes to be your partner.</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="time" value="0" required>You’re so exhausted that you sit on a couch and stare at your phone blankly.</label>
+              <label><input type="radio" name="time" value="0">You’re so exhausted that you sit on a couch and stare at your phone blankly.</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="time" value="3" required>You go to the kitchen and offer up some snacks to a full table, casually mentioning that you need a partner.</label>
+              <label><input type="radio" name="time" value="3">You go to the kitchen and offer up some snacks to a full table, casually mentioning that you need a partner.</label>
             </div>
           </div>
+          <button type="submit" id="go-to-63a" class="btn">Turn the Page</button>
+        </form>
+        <hr>
+      </div>
+      <!-- page 63a -->
+      <div id="page-63a">
+        <form id="page-63a-form">
           <div class="form-group">
             <h3>You haven’t found a partner yet, and you’re getting desperate. What should you do now?</h3>
             <div class="radio">
-              <label><input type="radio" name="money" value="15" required>You promise the nearest person you’ll buy them lunch if they pair with you today.</label>
+              <label><input type="radio" name="money" value="15" checked>You promise the nearest person you’ll buy them lunch if they pair with you today.</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="money" value="60" required>You bribe your potential partner with the fact that you’ve already completed the first exercise of the day at home.</label>
+              <label><input type="radio" name="money" value="60">You bribe your potential partner with the fact that you’ve already completed the first exercise of the day at home.</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="money" value="35" required>You hand over your coffee to your partner, and promise them another at your 10:00 break.</label>
+              <label><input type="radio" name="money" value="35">You hand over your coffee to your partner, and promise them another at your 10:00 break.</label>
             </div>
           </div>
           <p>
             You've made it this far, but you're still not finished. Head to a computer and sign in!
           </p>
-          <button type="submit" id="go-to-7a" class="btn">Go to Log In</button>
+          <button type="submit" id="go-to-70a" class="btn">Go to Log In</button>
         </form>
         <hr>
       </div>
 
-      <!-- Page 7 -->
-      <div id="page-7a">
-        <h2>Page 7</h2>
+
+      <!-- Page 70a -->
+      <div id="page-70a">
+        <h2>The  Late  Login</h2>
         <p>
         Yay, <span class="user-name"></span>, you’ve found your partner! You’re almost to the finish line… but not yet! You have 10 minutes until your login deadline.
         </p>
-        <form id="page-7a-form">
+        <button type="button" id="go-to-71a" class="btn">Let's Go!</button>
+        <hr>
+      </div>
+      <!-- page 71a -->
+      <div id="page-71a">
+        <form id="page-71a-form">
           <div class="form-group">
             <h3>You don’t see any open computers. Where should you go?</h3>
             <div class="radio">
-              <label><input type="radio" name="time" value="10" required>You sneak over to the javascript class section and commandeer one of their computers.</label>
+              <label><input type="radio" name="time" value="10" checked>You sneak over to the javascript class section and commandeer one of their computers.</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="time" value="3" required>You grab a laptop out of your bag and chill on the couch.</label>
+              <label><input type="radio" name="time" value="3">You grab a laptop out of your bag and chill on the couch.</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="time" value="6" required>You sit down at a teacher’s computer.</label>
+              <label><input type="radio" name="time" value="6">You sit down at a teacher’s computer.</label>
             </div>
           </div>
+          <button type="submit" id="go-to-72a" class="btn">Turn the Page</button>
+        </form>
+        <hr>
+      </div>
+      <!-- page 72a -->
+      <div id="page-72a">
+        <form id="page-72a-form">
           <div class="form-group">
             <h3>You’ve forgotten your login for Epicodus! What now?</h3>
             <div class="radio">
-              <label><input type="radio" name="focus" value="6" required>You call your roommate and have them check on your home computer for you.</label>
+              <label><input type="radio" name="focus" value="6" checked>You call your roommate and have them check on your home computer for you.</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="focus" value="3" required>You’ve got to go back home, get your password, and start again.</label>
+              <label><input type="radio" name="focus" value="3" >You’ve got to go back home, get your password, and start again.</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="focus" value="10" required>You’re a rockstar and you’ve saved all your passwords in a top secret google doc.</label>
+              <label><input type="radio" name="focus" value="10" >You’re a rockstar and you’ve saved all your passwords in a top secret google doc.</label>
             </div>
           </div>
+          <button type="submit" id="go-to-73a" class="btn">Turn the Page</button>
+        </form>
+        <hr>
+      </div>
+      <!-- page 73a -->
+      <div id="page-73a">
+        <form id="page-73a-form">
           <div class="form-group">
             <h3>You and your partner have finally logged in, but your partner is now slumped over on the desk taking a nap.</h3>
             <div class="radio">
-              <label><input type="radio" name="money" value="3" required>You go buy them a triple macchiato with whip.</label>
+              <label><input type="radio" name="money" value="3" checked>You go buy them a triple macchiato with whip.</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="money" value="10" required>You wake them up by showing them your cool dance moves.</label>
+              <label><input type="radio" name="money" value="10">You wake them up by showing them your cool dance moves.</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="money" value="6" required>You give them half of your emergency red bull you had stored in your cubby.</label>
+              <label><input type="radio" name="money" value="6">You give them half of your emergency red bull you had stored in your cubby.</label>
             </div>
           </div>
           <p>
@@ -451,9 +595,9 @@
         </form>
         <hr>
       </div>
+
       <!-- Finish Page -->
       <div id="page-final">
-        <h2>Finish Page</h2>
         <!-- 0-100 	Not so good -->
         <div id="high-score">
           <h3>High Score</h3>

@@ -53,6 +53,19 @@ function clearPageDisplay () {
   $(".page-score").text("");
 }
 
+function loserDetector () {
+  if (newPlayer.playerFocus <= 0) {
+    $("#question-pages").hide();
+    $("#focus-loser").show();
+  } else if (newPlayer.playerTime <= 0) {
+    $("#question-pages").hide();
+    $("#time-loser").show();
+  } else if (newPlayer.playerMoney <=0) {
+    $("#question-pages").hide();
+    $("#money-loser").show();
+  }
+}
+
 $(document).ready(function() {
 
 //landing page
@@ -69,67 +82,54 @@ $(document).ready(function() {
     event.preventDefault();
     $("#page-10a").hide();
     $("#page-11a").show();
-    $("#scoreboard-page").show();
+    $("#scoreboard-header").show();
   });
 
 //page 11a
   $("#go-to-12a").click(function(event){
     event.preventDefault();
     var focus = parseInt($("#page-11a-form input:radio[name=focus]:checked").val());
-    console.log(focus);
-    updatePageDisplay(focus);
     newPlayer.calculateFocus(focus);
     newPlayer.calculateScore();
     updateScoreboard();
     $("#page-11a").hide();
     $("#page-12a").show();
-    $("#scoreboard-page").show();
   });
 
 //page 12a
   $("#go-to-13a").click(function(event){
     event.preventDefault();
     var time = parseInt($("#page-12a-form input:radio[name=time]:checked").val());
-    (time);
     newPlayer.calculateTime(time);
     newPlayer.calculateScore();
     updateScoreboard();
-
     $("#page-12a").hide();
     $("#page-13a").show();
-    $("#scoreboard-page").show();
   });
 
 //page 13a
   $("#go-to-20a").click(function(event){
     event.preventDefault();
     var money = parseInt($("#page-13a-form input:radio[name=money]:checked").val());
-    updatePageDisplay(money);
-    console.log(money);
     newPlayer.calculateMoney(money);
     newPlayer.calculateScore();
     updateScoreboard();
-
+    loserDetector();
     $("#page-13a").hide();
     $("#page-20a").show();
-    $("#scoreboard-page").show();
   });
 
 //page 20a (branching page)
   $("#go-to-30a").click(function(event){
     event.preventDefault();
-    clearPageDisplay();
     $("#page-20a").hide();
     $("#page-30a").show();
-    $("#scoreboard-page").hide();
   });
 
   $("#go-to-30b").click(function(event){
     event.preventDefault();
-    clearPageDisplay();
     $("#page-20a").hide();
     $("#page-30b").show();
-    $("#scoreboard-page").hide();
   });
 
 //page 30a
@@ -137,370 +137,287 @@ $(document).ready(function() {
     event.preventDefault();
     $("#page-30a").hide();
     $("#page-31a").show();
-    $("#scoreboard-page").show();
   });
 
 //page 31a
   $("#go-to-32a").click(function(event){
     event.preventDefault();
     var money = parseInt($("#page-31a-form input:radio[name=money]:checked").val());
-    updatePageDisplay(money);
     newPlayer.calculateMoney(money);
     newPlayer.calculateScore();
     updateScoreboard();
+    loserDetector();
     $("#page-31a").hide();
     $("#page-32a").show();
-    $("#scoreboard-page").show();
-
   });
 
 //page 32a
   $("#go-to-33a").click(function(event){
     event.preventDefault();
     var focus = parseInt($("#page-32a-form input:radio[name=focus]:checked").val());
-    updatePageDisplay(focus);
     newPlayer.calculateFocus(focus);
     newPlayer.calculateScore();
     updateScoreboard();
-
+    loserDetector();
     $("#page-32a").hide();
     $("#page-33a").show();
-    $("#scoreboard-page").show();
-
   });
 
 //page 33a
   $("#33a-go-to-40a").click(function(event){
     event.preventDefault();
     var time = parseInt($("#page-33a-form input:radio[name=time]:checked").val());
-    updatePageDisplay(time);
-    newPlayer.playerTime -= 40;
     newPlayer.calculateTime(time);
     newPlayer.calculateScore();
     updateScoreboard();
-
+    loserDetector();
     $("#page-33a").hide();
     $("#page-40a").show();
-    $("#scoreboard-page").show();
-
   });
 
 //page 30b
   $("#go-to-31b").click(function(event){
     event.preventDefault();
-
     $("#page-30b").hide();
     $("#page-31b").show();
-    $("#scoreboard-page").show();
-
   });
 
 //page 31b
   $("#go-to-32b").click(function(event){
     event.preventDefault();
-
     var focus = parseInt($("#page-31b-form input:radio[name=focus]:checked").val());
-    updatePageDisplay(focus);
     newPlayer.calculateFocus(focus);
     newPlayer.calculateScore();
     updateScoreboard();
-
+    loserDetector();
     $("#page-31b").hide();
     $("#page-32b").show();
-    $("#scoreboard-page").show();
   });
 
 //page 32b
   $("#go-to-32b").click(function(event){
     event.preventDefault();
-
     var money = parseInt($("#page-32b-form input:radio[name=money]:checked").val());
-    updatePageDisplay(money);
     newPlayer.calculateMoney(money);
     newPlayer.calculateScore();
     updateScoreboard();
-
+    loserDetector();
     $("#page-32b").hide();
     $("#page-33b").show();
-    $("#scoreboard-page").show();
-
   });
 
 //page 33b
   $("#33b-go-to-40a").click(function(event){
     event.preventDefault();
-
     var time = parseInt($("#page-33b-form input:radio[name=time]:checked").val());
-    updatePageDisplay(time);
     newPlayer.calculateTime(time);
     newPlayer.calculateScore();
-
     updateScoreboard();
-
+    loserDetector();
     $("#page-33b").hide();
     $("#page-40a").show();
-    $("#scoreboard-page").show();
-
   });
 
 //page 40a (branching page)
   $("#go-to-50a").click(function(event){
     event.preventDefault();
-
-    clearPageDisplay();
-
     $("#page-40a").hide();
     $("#page-50a").show();
-    $("#scoreboard-page").hide();
-
   });
 
   $("#go-to-50b").click(function(event){
     event.preventDefault();
-
-    clearPageDisplay();
-
     $("#page-40a").hide();
     $("#page-50b").show();
-    $("#scoreboard-page").hide();
-
   });
 
 //page 50a
   $("#go-to-51a").click(function(event){
     event.preventDefault();
-
     updateScoreboard();
-
     $("#page-50a").hide();
     $("#page-51a").show();
-    $("#scoreboard-page").show();
-
   });
 
 //page 51a
   $("#go-to-52a").click(function(event){
     event.preventDefault();
-
     var money = parseInt($("#page-51a-form input:radio[name=money]:checked").val());
-    updatePageDisplay(money);
     newPlayer.calculateMoney(money);
     newPlayer.calculateScore();
     updateScoreboard();
-
+    loserDetector();
     $("#page-51a").hide();
     $("#page-52a").show();
-    $("#scoreboard-page").show();
-
   });
 
 //page 52a
   $("#go-to-53a").click(function(event){
     event.preventDefault();
-
     var time = parseInt($("#page-52a-form input:radio[name=time]:checked").val());
-    updatePageDisplay(time);
     newPlayer.calculateTime(time);
     newPlayer.calculateScore();
     updateScoreboard();
-
+    loserDetector();
     $("#page-52a").hide();
     $("#page-53a").show();
-    $("#scoreboard-page").show();
-
   });
 
 //page 53a
   $("#53a-go-to-60a").click(function(event){
     event.preventDefault();
-
-    var focus = parseInt($("#page-53a input:radio[name=focus]:checked").val());
-    updatePageDisplay(focus);
+    var focus = parseInt($("#page-53a-form input:radio[name=focus]:checked").val());
     newPlayer.calculateFocus(focus);
     newPlayer.calculateScore();
     updateScoreboard();
-
+    loserDetector();
     $("#page-53a").hide();
     $("#page-60a").show();
-    $("#scoreboard-page").show();
-
   });
-
 
 //page 50b
   $("#go-to-51b").click(function(event){
     event.preventDefault();
-
     $("#page-50b").hide();
     $("#page-51b").show();
-    $("#scoreboard-page").show();
   });
 
 //page 51b
   $("#go-to-52b").click(function(event){
     event.preventDefault();
-
     var money = parseInt($("#page-51b-form input:radio[name=money]:checked").val());
-    updatePageDisplay(money);
     newPlayer.calculateMoney(money);
     newPlayer.calculateScore();
     updateScoreboard();
-
+    loserDetector();
     $("#page-51b").hide();
     $("#page-52b").show();
-    $("#scoreboard-page").show();
   });
 
 //page 52b
   $("#go-to-53b").click(function(event){
     event.preventDefault();
-
     var focus = parseInt($("#page-52b-form input:radio[name=focus]:checked").val());
-    updatePageDisplay(focus);
     newPlayer.calculateFocus(focus);
     newPlayer.calculateScore();
     updateScoreboard();
-
+    loserDetector();
     $("#page-52b").hide();
     $("#page-53b").show();
-    $("#scoreboard-page").show();
   });
 
 //page 53b
   $("#53b-go-to-60a").click(function(event){
     event.preventDefault();
-
     var time = parseInt($("#page-53b-form input:radio[name=time]:checked").val());
-    updatePageDisplay(time);
     newPlayer.calculateTime(time);
     newPlayer.calculateScore();
     updateScoreboard();
-
+    loserDetector();
     $("#page-53b").hide();
     $("#page-60a").show();
-    $("#scoreboard-page").show();
   });
 
-
 //page 60a
-  $("#go-to-61a").submit(function(event){
+  $("#go-to-61a").click(function(event){
     event.preventDefault();
-
     $("#page-60a").hide();
     $("#page-61a").show();
-    $("#scoreboard-page").show();
   });
 
 //page 61a
-  $("#go-to-62a").submit(function(event){
+  $("#go-to-62a").click(function(event){
     event.preventDefault();
-
     var focus = parseInt($("#page-61a-form input:radio[name=focus]:checked").val());
-    updatePageDisplay(focus);
-    newPlayer.playerTime -= 10;
     newPlayer.calculateFocus(focus);
     newPlayer.calculateScore();
     updateScoreboard();
-
+    loserDetector();
     $("#page-61a").hide();
     $("#page-62a").show();
-    $("#scoreboard-page").show();
   });
 
 //page 62a
-  $("#go-to-63a").submit(function(event){
+  $("#go-to-63a").click(function(event){
     event.preventDefault();
-
     var time = parseInt($("#page-62a-form input:radio[name=time]:checked").val());
-    updatePageDisplay(time);
     newPlayer.calculateTime(time);
     newPlayer.calculateScore();
     updateScoreboard();
-
+    loserDetector();
     $("#page-62a").hide();
     $("#page-63a").show();
-    $("#scoreboard-page").show();
   });
 
 //page 63a
-  $("#go-to-70a").submit(function(event){
+  $("#go-to-70a").click(function(event){
     event.preventDefault();
-
     var money = parseInt($("#page-63a-form input:radio[name=money]:checked").val());
-    updatePageDisplay(money);
     newPlayer.calculateMoney(money);
     newPlayer.calculateScore();
     updateScoreboard();
-
+    loserDetector();
     $("#page-63a").hide();
     $("#page-70a").show();
-    $("#scoreboard-page").show();
   });
 
 //page 70a
-  $("#go-to-71a").submit(function(event){
+  $("#go-to-71a").click(function(event){
     event.preventDefault();
-
     $("#page-70a").hide();
     $("#page-71a").show();
-    $("#scoreboard-page").show();
   });
 
-
 //page 71a
-  $("#go-to-72a").submit(function(event){
+  $("#go-to-72a").click(function(event){
     event.preventDefault();
-
     var time = parseInt($("#page-71a-form input:radio[name=time]:checked").val());
-    updatePageDisplay(time);
     newPlayer.calculateTime(time);
     newPlayer.calculateScore();
     updateScoreboard();
-
+    loserDetector();
     $("#page-71a").hide();
     $("#page-72a").show();
-    $("#scoreboard-page").show();
   });
 
 //page 72a
-  $("#go-to-73a").submit(function(event){
+  $("#go-to-73a").click(function(event){
     event.preventDefault();
-
     var focus = parseInt($("#page-72a-form input:radio[name=focus]:checked").val());
-    updatePageDisplay(focus);
     newPlayer.calculateFocus(focus);
     newPlayer.calculateScore();
     updateScoreboard();
-
+    loserDetector();
     $("#page-72a").hide();
     $("#page-73a").show();
-    $("#scoreboard-page").show();
   });
 
 //page 73a
-  $("#go-to-finish").submit(function(event){
+  $("#go-to-finish").click(function(event){
     event.preventDefault();
-
     var money = parseInt($("#page-73a-form input:radio[name=money]:checked").val());
-    updatePageDisplay(money);
     newPlayer.calculateMoney(money);
     newPlayer.calculateScore();
     updateScoreboard();
-
     $("#page-73a").hide();
     $("#page-final").show();
-    $("#scoreboard-page").show();
 
-    if (newPlayer.playerScore < 101) {
+    if (newPlayer.playerScore < 50) {
       $("#low-score").show();
-    } else if (newPlayer.playerScore < 201) {
+    } else if (newPlayer.playerScore < 100) {
       $("#medium-score").show();
     } else {
       $("#high-score").show();
     }
-
   });
 
+//loser pages
+  $(".start-over").click(function(event) {
+    $("#question-pages").hide();
+    $("#scoreboard-header").hide();
+    $("#loser-pages").hide();
+    $("#landing-page").show();
+    location.reload();
   });
-
+  });
 });

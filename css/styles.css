@@ -92,6 +92,15 @@ ul {
   margin-bottom: 5%;
 }
 
+#scoreboard-page {
+  display: none;
+}
+
+/*Page Styles*/
+.user-name {
+  color: #7D0505;
+}
+
 /*Branch Page Styles*/
 .branch-page{
   text-align: center;

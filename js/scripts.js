@@ -63,15 +63,15 @@ $(document).ready(function() {
     updateScoreboard();
 
     $("#landing-page").hide();
-    $("#page-1a").show();
+    $("#page-10a").show();
 
-//page 1
-  $("#go-to-2a").click(function(event){
+//page 10
+  $("#go-to-20a").click(function(event){
     event.preventDefault();
 
-    var focus = parseInt($("#page-1a-form input:radio[name=focus]:checked").val());
-    var time = parseInt($("#page-1a-form input:radio[name=time]:checked").val());
-    var money = parseInt($("#page-1a-form input:radio[name=money]:checked").val());
+    var focus = parseInt($("#page-10a-form input:radio[name=focus]:checked").val());
+    var time = parseInt($("#page-10a-form input:radio[name=time]:checked").val());
+    var money = parseInt($("#page-10a-form input:radio[name=money]:checked").val());
 
     updatePageScores(focus, time, money);
 
@@ -84,41 +84,41 @@ $(document).ready(function() {
 
     updateScoreboard();
 
-    $("#page-1a").hide();
-    $("#page-2a").show();
+    $("#page-10a").hide();
+    $("#page-20a").show();
     $("#scoreboard-page").show();
   });
 
-//page 2 (branching page)
-  $("#go-to-3a").click(function(event){
+//page 20 (branching page)
+  $("#go-to-30a").click(function(event){
     event.preventDefault();
 
     clearPageDisplay();
 
-    $("#page-2a").hide();
-    $("#page-3a").show();
+    $("#page-20a").hide();
+    $("#page-30a").show();
     $("#scoreboard-page").hide();
 
   });
 
-  $("#go-to-3b").click(function(event){
+  $("#go-to-30b").click(function(event){
     event.preventDefault();
 
     clearPageDisplay();
 
-    $("#page-2a").hide();
-    $("#page-3b").show();
+    $("#page-20a").hide();
+    $("#page-30b").show();
     $("#scoreboard-page").hide();
 
   });
 
-//page 3A
-  $("#3a-go-to-4a").click(function(event){
+//page 30A
+  $("#30a-go-to-40a").click(function(event){
     event.preventDefault();
 
-    var focus = parseInt($("#page-3a-form input:radio[name=focus]:checked").val());
-    var time = parseInt($("#page-3a-form input:radio[name=time]:checked").val());
-    var money = parseInt($("#page-3a-form input:radio[name=money]:checked").val());
+    var focus = parseInt($("#page-30a-form input:radio[name=focus]:checked").val());
+    var time = parseInt($("#page-30a-form input:radio[name=time]:checked").val());
+    var money = parseInt($("#page-30a-form input:radio[name=money]:checked").val());
 
     updatePageScores(focus, time, money);
 
@@ -130,14 +130,14 @@ $(document).ready(function() {
 
     updateScoreboard();
 
-    $("#page-3a").hide();
-    $("#page-4a").show();
+    $("#page-30a").hide();
+    $("#page-40a").show();
     $("#scoreboard-page").show();
 
   });
 
-//page 3B
-  $("#3b-go-to-4a").click(function(event){
+//page 30B
+  $("#30b-go-to-40a").click(function(event){
     event.preventDefault();
 
     var focus = parseInt($("#page-3b-form input:radio[name=focus]:checked").val());
@@ -154,42 +154,42 @@ $(document).ready(function() {
 
     updateScoreboard();
 
-    $("#page-3b").hide();
-    $("#page-4a").show();
+    $("#page-30b").hide();
+    $("#page-40a").show();
     $("#scoreboard-page").show();
 
   });
 
-  //page 4 (branching page)
-  $("#go-to-5a").click(function(event){
+  //page 40 (branching page)
+  $("#go-to-50a").click(function(event){
     event.preventDefault();
 
     clearPageDisplay();
 
-    $("#page-4a").hide();
-    $("#page-5a").show();
+    $("#page-40a").hide();
+    $("#page-50a").show();
     $("#scoreboard-page").hide();
 
   });
 
-  $("#go-to-5b").click(function(event){
+  $("#go-to-50b").click(function(event){
     event.preventDefault();
 
     clearPageDisplay();
 
-    $("#page-4a").hide();
-    $("#page-5b").show();
+    $("#page-40a").hide();
+    $("#page-50b").show();
     $("#scoreboard-page").hide();
 
   });
 
-//page 5a
-  $("#5a-go-to-6a").click(function(event){
+//page 50a
+  $("#50a-go-to-60a").click(function(event){
     event.preventDefault();
 
-    var focus = parseInt($("#page-5a-form input:radio[name=focus]:checked").val());
-    var time = parseInt($("#page-5a-form input:radio[name=time]:checked").val());
-    var money = parseInt($("#page-5a-form input:radio[name=money]:checked").val());
+    var focus = parseInt($("#page-50a-form input:radio[name=focus]:checked").val());
+    var time = parseInt($("#page-50a-form input:radio[name=time]:checked").val());
+    var money = parseInt($("#page-50a-form input:radio[name=money]:checked").val());
 
     updatePageScores(focus, time, money);
 
@@ -201,19 +201,19 @@ $(document).ready(function() {
 
     updateScoreboard();
 
-    $("#page-5a").hide();
-    $("#page-6a").show();
+    $("#page-50a").hide();
+    $("#page-60a").show();
     $("#scoreboard-page").show();
 
   });
 
-  //page 5b
-  $("#5b-go-to-6a").click(function(event){
+  //page 50b
+  $("#50b-go-to-60a").click(function(event){
     event.preventDefault();
 
-    var focus = parseInt($("#page-5b-form input:radio[name=focus]:checked").val());
-    var time = parseInt($("#page-5b-form input:radio[name=time]:checked").val());
-    var money = parseInt($("#page-5b-form input:radio[name=money]:checked").val());
+    var focus = parseInt($("#page-50b-form input:radio[name=focus]:checked").val());
+    var time = parseInt($("#page-50b-form input:radio[name=time]:checked").val());
+    var money = parseInt($("#page-50b-form input:radio[name=money]:checked").val());
 
     updatePageScores(focus, time, money);
 
@@ -225,18 +225,18 @@ $(document).ready(function() {
 
     updateScoreboard();
 
-    $("#page-5b").hide();
-    $("#page-6a").show();
+    $("#page-50b").hide();
+    $("#page-60a").show();
     $("#scoreboard-page").show();
     });
 
-//page 6a
-  $("#go-to-7a").submit(function(event){
+//page 60a
+  $("#go-to-70a").submit(function(event){
     event.preventDefault();
 
-    var focus = parseInt($("#page-6a-form input:radio[name=focus]:checked").val());
-    var time = parseInt($("#page-6a-form input:radio[name=time]:checked").val());
-    var money = parseInt($("#page-6a-form input:radio[name=money]:checked").val());
+    var focus = parseInt($("#page-60a-form input:radio[name=focus]:checked").val());
+    var time = parseInt($("#page-60a-form input:radio[name=time]:checked").val());
+    var money = parseInt($("#page-60a-form input:radio[name=money]:checked").val());
 
     updatePageScores(focus, time, money);
 
@@ -248,18 +248,18 @@ $(document).ready(function() {
 
     updateScoreboard();
 
-    $("#page-6a").hide();
-    $("#page-7a").show();
+    $("#page-60a").hide();
+    $("#page-70a").show();
     $("#scoreboard-page").show();
   });
 
-//page 7a
+//page 70a
   $("#go-to-finish").submit(function(event){
     event.preventDefault();
 
-    var focus = parseInt($("#page-7a-form input:radio[name=focus]:checked").val());
-    var time = parseInt($("#page-7a-form input:radio[name=time]:checked").val());
-    var money = parseInt($("#page-7a-form input:radio[name=money]:checked").val());
+    var focus = parseInt($("#page-70a-form input:radio[name=focus]:checked").val());
+    var time = parseInt($("#page-70a-form input:radio[name=time]:checked").val());
+    var money = parseInt($("#page-70a-form input:radio[name=money]:checked").val());
 
     updatePageScores(focus, time, money);
 
@@ -271,7 +271,7 @@ $(document).ready(function() {
 
     updateScoreboard();
 
-    $("#page-7a").hide();
+    $("#page-70a").hide();
     $("#page-final").show();
     $("#scoreboard-page").show();
 

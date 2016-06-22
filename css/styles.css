@@ -39,6 +39,14 @@ font-family: 'Monoton', cursive;*/
   display: none;
 }
 
+#focus-loser, #time-loser, #money-loser {
+  display: none;
+}
+
+#scoreboard-header {
+  display: none;
+}
+
 body {
   background-color: #b2b2b2;
   font-family: 'Quantico', sans-serif;

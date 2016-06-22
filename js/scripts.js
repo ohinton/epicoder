@@ -4,7 +4,7 @@ function Player(name) {
   this.playerName = name;
   this.playerFocus = 0;
   this.playerTime = 100;
-  this.playerMoney = 0;
+  this.playerMoney = 10;
   this.playerScore = 0;
 }
 
@@ -37,7 +37,7 @@ function updatePageScores (focus, time, money) {
   $(".page-focus").text(focus);
   $(".page-time").text(time);
   $(".page-money").text(money);
-  var pageScore = focus + time + money;
+  var pageScore = focus + time + money * 10;
   $(".page-score").text(pageScore);
 }
 
@@ -48,7 +48,6 @@ function clearPageDisplay () {
   $(".page-score").text("");
 }
 
-
 $(document).ready(function() {
 
 //landing page
@@ -57,33 +56,28 @@ $(document).ready(function() {
 
     var name = $("#new-user-name").val();
     newPlayer = new Player(name);
-    console.log(newPlayer);
+
     updateScoreboard();
 
     $("#landing-page").hide();
     $("#page-1a").show();
 
-
 //page 1
   $("#go-to-2a").click(function(event){
     event.preventDefault();
-    // collect adjustments to our variables
+
     var focus = parseInt($("#page-1a-form input:radio[name=focus]:checked").val());
     var time = parseInt($("#page-1a-form input:radio[name=time]:checked").val());
     var money = parseInt($("#page-1a-form input:radio[name=money]:checked").val());
-    //display scores from this page
 
     updatePageScores(focus, time, money);
-    //calculate new player scores for focus, time, money and total score
 
     newPlayer.playerTime -= 30;
-    console.log(newPlayer.playerTime);
 
     newPlayer.calculateFocus(focus);
     newPlayer.calculateTime(time);
     newPlayer.calculateMoney(money);
     newPlayer.calculateScore();
-    console.log(newPlayer.playerTime);
 
     updateScoreboard();
 
@@ -143,7 +137,6 @@ $(document).ready(function() {
   $("#3b-go-to-4a").click(function(event){
     event.preventDefault();
 
-    // collect adjustments to our variables
     var focus = parseInt($("#page-3b-form input:radio[name=focus]:checked").val());
     var time = parseInt($("#page-3b-form input:radio[name=time]:checked").val());
     var money = parseInt($("#page-3b-form input:radio[name=money]:checked").val());
@@ -191,7 +184,6 @@ $(document).ready(function() {
   $("#5a-go-to-6a").click(function(event){
     event.preventDefault();
 
-    // collect adjustments to our variables
     var focus = parseInt($("#page-5a-form input:radio[name=focus]:checked").val());
     var time = parseInt($("#page-5a-form input:radio[name=time]:checked").val());
     var money = parseInt($("#page-5a-form input:radio[name=money]:checked").val());
@@ -215,7 +207,7 @@ $(document).ready(function() {
   //page 5b
   $("#5b-go-to-6a").click(function(event){
     event.preventDefault();
-    // collect adjustments to our variables
+
     var focus = parseInt($("#page-5b-form input:radio[name=focus]:checked").val());
     var time = parseInt($("#page-5b-form input:radio[name=time]:checked").val());
     var money = parseInt($("#page-5b-form input:radio[name=money]:checked").val());
@@ -236,10 +228,9 @@ $(document).ready(function() {
     });
 
 //page 6a
-  $("#go-to-7a").click(function(event){
+  $("#go-to-7a").submit(function(event){
     event.preventDefault();
 
-    // collect adjustments to our variables
     var focus = parseInt($("#page-6a-form input:radio[name=focus]:checked").val());
     var time = parseInt($("#page-6a-form input:radio[name=time]:checked").val());
     var money = parseInt($("#page-6a-form input:radio[name=money]:checked").val());
@@ -260,10 +251,9 @@ $(document).ready(function() {
   });
 
 //page 7a
-  $("#go-to-finish").click(function(event){
+  $("#go-to-finish").submit(function(event){
     event.preventDefault();
 
-    // collect adjustments to our variables
     var focus = parseInt($("#page-7a-form input:radio[name=focus]:checked").val());
     var time = parseInt($("#page-7a-form input:radio[name=time]:checked").val());
     var money = parseInt($("#page-7a-form input:radio[name=money]:checked").val());

@@ -116,7 +116,7 @@ $(document).ready(function() {
   });
 
 //page 3A
-  $("#3a-go-to-4a").click(function(event){
+  $("#3a-go-to-4a").submit(function(event){
     event.preventDefault();
 
     var focus = parseInt($("#page-3a-form input:radio[name=focus]:checked").val());
@@ -140,7 +140,7 @@ $(document).ready(function() {
   });
 
 //page 3B
-  $("#3b-go-to-4a").click(function(event){
+  $("#3b-go-to-4a").submit(function(event){
     event.preventDefault();
 
     // collect adjustments to our variables
@@ -188,7 +188,7 @@ $(document).ready(function() {
   });
 
 //page 5a
-  $("#5a-go-to-6a").click(function(event){
+  $("#5a-go-to-6a").submit(function(event){
     event.preventDefault();
 
     // collect adjustments to our variables
@@ -213,7 +213,7 @@ $(document).ready(function() {
   });
 
   //page 5b
-  $("#5b-go-to-6a").click(function(event){
+  $("#5b-go-to-6a").submit(function(event){
     event.preventDefault();
     // collect adjustments to our variables
     var focus = parseInt($("#page-5b-form input:radio[name=focus]:checked").val());
@@ -236,7 +236,7 @@ $(document).ready(function() {
     });
 
 //page 6a
-  $("#go-to-7a").click(function(event){
+  $("#go-to-7a").submit(function(event){
     event.preventDefault();
 
     // collect adjustments to our variables
@@ -260,7 +260,7 @@ $(document).ready(function() {
   });
 
 //page 7a
-  $("#go-to-finish").click(function(event){
+  $("#go-to-finish").submit(function(event){
     event.preventDefault();
 
     // collect adjustments to our variables

@@ -131,6 +131,10 @@ ul {
   margin: auto;
 }
 
+#scoreboard-page {
+  display: none;
+}
+
 /*#page-1a, #page-2a, #page-3a, #page-3b, #page-4a, #page-5a, #page-5b, #page-6a, #page-7a, #page-final, #low-score, #medium-score, #high-score {
   display: none;
 }*/

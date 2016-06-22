@@ -1,9 +1,7 @@
-var newPlayer = {};
-
 function Player(name) {
   this.playerName = name;
-  this.playerFocus = 0;
-  this.playerTime = 100;
+  this.playerFocus = 100;
+  this.playerTime = 90;
   this.playerMoney = 10;
   this.playerScore = 0;
 }
@@ -28,14 +26,19 @@ Player.prototype.calculateScore = function () {
 function updateScoreboard (name, focus, time, money, score) {
   $(".user-name").text(newPlayer.playerName);
   $(".scoreboard-focus").text(newPlayer.playerFocus);
-  $(".scoreboard-time").text(newPlayer.playerTime);
+  var time = newPlayer.playerTime;
+  var hours = Math.floor(time / 60);
+  var minutes = time % 60;
+  $(".scoreboard-time").text(hours + " hour & " + minutes + " minutes remaining");
   $(".scoreboard-money").text(newPlayer.playerMoney);
   $(".scoreboard-score").text(newPlayer.playerScore);
 }
 
 function updatePageScores (focus, time, money) {
   $(".page-focus").text(focus);
-  $(".page-time").text(time);
+  var hours = Math.floor(time / 60);
+  var minutes = time % 60;
+  $(".page-time").text(hours + " hour & " + minutes);
   $(".page-money").text(money);
   var pageScore = focus + time + money * 10;
   $(".page-score").text(pageScore);

@@ -7,15 +7,15 @@ function Player(name) {
 }
 
 Player.prototype.calculateFocus = function (focus) {
-  return this.playerFocus += focus;
+  return this.playerFocus -= focus;
 }
 
 Player.prototype.calculateTime = function (time) {
-  return this.playerTime += time;
+  return this.playerTime -= time;
 }
 
 Player.prototype.calculateMoney = function (money) {
-  return this.playerMoney += money;
+  return this.playerMoney -= money;
 }
 
 Player.prototype.calculateScore = function () {
@@ -26,21 +26,22 @@ Player.prototype.calculateScore = function () {
 function updateScoreboard (name, focus, time, money, score) {
   $(".user-name").text(newPlayer.playerName);
   $(".scoreboard-focus").text(newPlayer.playerFocus);
-  var time = newPlayer.playerTime;
-  var hours = Math.floor(time / 60);
-  var minutes = time % 60;
-  $(".scoreboard-time").text(hours + " hour & " + minutes + " minutes remaining");
+  var t = newPlayer.playerTime;
+  var hours = Math.floor(t / 60);
+  var minutes = t % 60;
+  $(".scoreboard-time").text(hours + " hour & " + minutes + " minutes");
   var money = newPlayer.playerMoney.toFixed(2);
-  $(".scoreboard-money").text(money);
+  $(".scoreboard-money").text("$" + money);
   $(".scoreboard-score").text(newPlayer.playerScore);
 }
 
-function updatePageScores (focus, time, money) {
+function updatePageDisplay (focus, time, money) {
   $(".page-focus").text(focus);
   var hours = Math.floor(time / 60);
   var minutes = time % 60;
   $(".page-time").text(hours + " hour & " + minutes);
-  $(".page-money").text(money);
+  var m = money.toFixed(2);
+  $(".page-money").text("$" + m);
   var pageScore = focus + time + money * 10;
   $(".page-score").text(pageScore);
 }
@@ -57,10 +58,9 @@ $(document).ready(function() {
 //landing page
   $("form#get-user-name").submit(function(event){
     event.preventDefault();
-    var name = $("#new-user-name").val();
+    var name = $("#new-user-name").val(); // initialize new player
     newPlayer = new Player(name);
-    updateScoreboard();
-
+    updateScoreboard();     // on button submit
     $("#landing-page").hide();
     $("#page-10a").show();
 
@@ -73,10 +73,11 @@ $(document).ready(function() {
   });
 
 //page 11a
-  $("#go-to-11a").click(function(event){
+  $("#go-to-12a").click(function(event){
     event.preventDefault();
     var focus = parseInt($("#page-11a-form input:radio[name=focus]:checked").val());
-    updatePageScores(focus);
+    console.log(focus);
+    updatePageDisplay(focus);
     newPlayer.calculateFocus(focus);
     newPlayer.calculateScore();
     updateScoreboard();
@@ -89,8 +90,7 @@ $(document).ready(function() {
   $("#go-to-13a").click(function(event){
     event.preventDefault();
     var time = parseInt($("#page-12a-form input:radio[name=time]:checked").val());
-    updatePageScores(time);
-    newPlayer.playerTime -= 30;
+    (time);
     newPlayer.calculateTime(time);
     newPlayer.calculateScore();
     updateScoreboard();
@@ -104,7 +104,8 @@ $(document).ready(function() {
   $("#go-to-20a").click(function(event){
     event.preventDefault();
     var money = parseInt($("#page-13a-form input:radio[name=money]:checked").val());
-    updatePageScores(money);
+    updatePageDisplay(money);
+    console.log(money);
     newPlayer.calculateMoney(money);
     newPlayer.calculateScore();
     updateScoreboard();
@@ -117,45 +118,36 @@ $(document).ready(function() {
 //page 20a (branching page)
   $("#go-to-30a").click(function(event){
     event.preventDefault();
-
     clearPageDisplay();
-
     $("#page-20a").hide();
     $("#page-30a").show();
     $("#scoreboard-page").hide();
-
   });
 
   $("#go-to-30b").click(function(event){
     event.preventDefault();
-
     clearPageDisplay();
-
     $("#page-20a").hide();
     $("#page-30b").show();
     $("#scoreboard-page").hide();
-
   });
 
 //page 30a
   $("#go-to-31a").click(function(event){
     event.preventDefault();
-
     $("#page-30a").hide();
     $("#page-31a").show();
     $("#scoreboard-page").show();
-
   });
 
 //page 31a
   $("#go-to-32a").click(function(event){
     event.preventDefault();
     var money = parseInt($("#page-31a-form input:radio[name=money]:checked").val());
-    updatePageScores(money);
+    updatePageDisplay(money);
     newPlayer.calculateMoney(money);
     newPlayer.calculateScore();
     updateScoreboard();
-
     $("#page-31a").hide();
     $("#page-32a").show();
     $("#scoreboard-page").show();
@@ -166,7 +158,7 @@ $(document).ready(function() {
   $("#go-to-33a").click(function(event){
     event.preventDefault();
     var focus = parseInt($("#page-32a-form input:radio[name=focus]:checked").val());
-    updatePageScores(focus);
+    updatePageDisplay(focus);
     newPlayer.calculateFocus(focus);
     newPlayer.calculateScore();
     updateScoreboard();
@@ -181,7 +173,7 @@ $(document).ready(function() {
   $("#33a-go-to-40a").click(function(event){
     event.preventDefault();
     var time = parseInt($("#page-33a-form input:radio[name=time]:checked").val());
-    updatePageScores(time);
+    updatePageDisplay(time);
     newPlayer.playerTime -= 40;
     newPlayer.calculateTime(time);
     newPlayer.calculateScore();
@@ -208,7 +200,7 @@ $(document).ready(function() {
     event.preventDefault();
 
     var focus = parseInt($("#page-31b-form input:radio[name=focus]:checked").val());
-    updatePageScores(focus);
+    updatePageDisplay(focus);
     newPlayer.calculateFocus(focus);
     newPlayer.calculateScore();
     updateScoreboard();
@@ -223,7 +215,7 @@ $(document).ready(function() {
     event.preventDefault();
 
     var money = parseInt($("#page-32b-form input:radio[name=money]:checked").val());
-    updatePageScores(money);
+    updatePageDisplay(money);
     newPlayer.calculateMoney(money);
     newPlayer.calculateScore();
     updateScoreboard();
@@ -239,7 +231,7 @@ $(document).ready(function() {
     event.preventDefault();
 
     var time = parseInt($("#page-33b-form input:radio[name=time]:checked").val());
-    updatePageScores(time);
+    updatePageDisplay(time);
     newPlayer.calculateTime(time);
     newPlayer.calculateScore();
 
@@ -291,7 +283,7 @@ $(document).ready(function() {
     event.preventDefault();
 
     var money = parseInt($("#page-51a-form input:radio[name=money]:checked").val());
-    updatePageScores(money);
+    updatePageDisplay(money);
     newPlayer.calculateMoney(money);
     newPlayer.calculateScore();
     updateScoreboard();
@@ -307,7 +299,7 @@ $(document).ready(function() {
     event.preventDefault();
 
     var time = parseInt($("#page-52a-form input:radio[name=time]:checked").val());
-    updatePageScores(time);
+    updatePageDisplay(time);
     newPlayer.calculateTime(time);
     newPlayer.calculateScore();
     updateScoreboard();
@@ -323,7 +315,7 @@ $(document).ready(function() {
     event.preventDefault();
 
     var focus = parseInt($("#page-53a input:radio[name=focus]:checked").val());
-    updatePageScores(focus);
+    updatePageDisplay(focus);
     newPlayer.calculateFocus(focus);
     newPlayer.calculateScore();
     updateScoreboard();
@@ -349,7 +341,7 @@ $(document).ready(function() {
     event.preventDefault();
 
     var money = parseInt($("#page-51b-form input:radio[name=money]:checked").val());
-    updatePageScores(money);
+    updatePageDisplay(money);
     newPlayer.calculateMoney(money);
     newPlayer.calculateScore();
     updateScoreboard();
@@ -364,7 +356,7 @@ $(document).ready(function() {
     event.preventDefault();
 
     var focus = parseInt($("#page-52b-form input:radio[name=focus]:checked").val());
-    updatePageScores(focus);
+    updatePageDisplay(focus);
     newPlayer.calculateFocus(focus);
     newPlayer.calculateScore();
     updateScoreboard();
@@ -379,7 +371,7 @@ $(document).ready(function() {
     event.preventDefault();
 
     var time = parseInt($("#page-53b-form input:radio[name=time]:checked").val());
-    updatePageScores(time);
+    updatePageDisplay(time);
     newPlayer.calculateTime(time);
     newPlayer.calculateScore();
     updateScoreboard();
@@ -404,7 +396,7 @@ $(document).ready(function() {
     event.preventDefault();
 
     var focus = parseInt($("#page-61a-form input:radio[name=focus]:checked").val());
-    updatePageScores(focus);
+    updatePageDisplay(focus);
     newPlayer.playerTime -= 10;
     newPlayer.calculateFocus(focus);
     newPlayer.calculateScore();
@@ -420,7 +412,7 @@ $(document).ready(function() {
     event.preventDefault();
 
     var time = parseInt($("#page-62a-form input:radio[name=time]:checked").val());
-    updatePageScores(time);
+    updatePageDisplay(time);
     newPlayer.calculateTime(time);
     newPlayer.calculateScore();
     updateScoreboard();
@@ -435,7 +427,7 @@ $(document).ready(function() {
     event.preventDefault();
 
     var money = parseInt($("#page-63a-form input:radio[name=money]:checked").val());
-    updatePageScores(money);
+    updatePageDisplay(money);
     newPlayer.calculateMoney(money);
     newPlayer.calculateScore();
     updateScoreboard();
@@ -460,7 +452,7 @@ $(document).ready(function() {
     event.preventDefault();
 
     var time = parseInt($("#page-71a-form input:radio[name=time]:checked").val());
-    updatePageScores(time);
+    updatePageDisplay(time);
     newPlayer.calculateTime(time);
     newPlayer.calculateScore();
     updateScoreboard();
@@ -475,7 +467,7 @@ $(document).ready(function() {
     event.preventDefault();
 
     var focus = parseInt($("#page-72a-form input:radio[name=focus]:checked").val());
-    updatePageScores(focus);
+    updatePageDisplay(focus);
     newPlayer.calculateFocus(focus);
     newPlayer.calculateScore();
     updateScoreboard();
@@ -490,7 +482,7 @@ $(document).ready(function() {
     event.preventDefault();
 
     var money = parseInt($("#page-73a-form input:radio[name=money]:checked").val());
-    updatePageScores(money);
+    updatePageDisplay(money);
     newPlayer.calculateMoney(money);
     newPlayer.calculateScore();
     updateScoreboard();

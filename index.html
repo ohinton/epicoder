@@ -97,7 +97,7 @@
                   <label><input type="radio" name="focus" value="0">You looked ahead at the next day’s lesson and started doing some work, and then went to bed at 11 pm.</label>
                 </div>
                 <div class="radio">
-                  <label><input type="radio" name="focus" value="6">You showered and packed your lunch, but you didn't make it to bed until midnight.</label>
+                  <label><input type="radio" name="focus" value="10">You showered and packed your lunch, but you didn't make it to bed until midnight.</label>
                 </div>
               </div>
               <button type="submit" id="go-to-12a" class="btn">Turn the Page</button>
@@ -113,7 +113,8 @@
       <div id="page-12a">
         <div class="row">
           <div class="col-md-6">
-            <p>You lost <span id="page-12a-update"></span>% focus.</p>
+            <!-- page 11a Focus result -->
+            <p><span class="first-letter">Y</span>ou lost <span id="page-12a-update"></span>% focus. Sleep is pretty important! It helps you keep up your focus. Let's see how quickly you can get out of bed now.</p>
             <form id="page-12a-form">
               <div class="form-group">
                 <h3>Wake Up!</h3>
@@ -140,7 +141,8 @@
       <div id="page-13a">
         <div class="row">
           <div class="col-md-6">
-            <p>You lost <span id="page-13a-update"></span> minutes.</p>
+            <!-- Page 12a Time result -->
+            <p><span class="first-letter">Y</span>ou lost <span id="page-13a-update"></span> minutes. It's best to wake up bright and early to save time!</p>
             <form id="page-13a-form">
               <div class="form-group">
                 <h3>Breakfast Time</h3>
@@ -166,7 +168,8 @@
 
       <!-- Page 20a (Branch Page)-->
       <div id="page-20a" class="branch-page">
-        <p>You lost $<span id="page-20a-update"></span>.</p>
+        <!-- page 13a money result -->
+        <p><span class="first-letter">Y</span>ou lost $<span id="page-20a-update"></span>. Conserve your cash for the rest of the day! Waking up getting out the door usually takes time, so you've lost <strong id="time-lost">20 minutes</strong>.</p>
         <h2>Transportation</h2>
         <p>
           <span class="first-letter">Y</span>ou’re out of the house and now you have to decide how to get downtown. What will you do?
@@ -192,7 +195,7 @@
           <div class="col-md-6">
             <h2>The  Bus  Ride</h2>
             <p>
-              <span class="first-letter">C</span>ongratulations, <span class="user-name"></span>, you took the bus! You can study while you ride, but you’ll have to spend some money.
+              <span class="first-letter">C</span>ongratulations, <span class="user-name"></span>, you took the bus! You can study while you ride, but you’ll have to spend some money. Taking the bus is a bit quicker than biking, so you've only lost <strong id="time-lost">20 minutes</strong>.
             </p>
             <button type="button" id="go-to-31a" class="btn">Let's Go!</button>
           </div>
@@ -233,12 +236,12 @@
         <div class="row">
           <div class="col-md-6">
             <!-- 31a money result -->
-            <p>You lost $<span id="page-32a-update"></span>.</p>
+            <p><span class="first-letter">Y</span>ou lost $<span id="page-32a-update"></span>. The bus can be expensive!</p>
             <form id="page-32a-form">
               <div class="form-group">
                 <h3>The bus is super crowded, what should you do?</h3>
                 <div class="radio">
-                  <label><input type="radio" name="focus" value="6" checked>You try studying the Epicodus curriculum while you stand.</label>
+                  <label><input type="radio" name="focus" value="5" checked>You try studying the Epicodus curriculum while you stand.</label>
                 </div>
                 <div class="radio">
                   <label><input type="radio" name="focus" value="0">You take the only seat available, before an elderly woman gets to it.</label>
@@ -262,7 +265,7 @@
         <div class="row">
           <div class="col-md-6">
             <!-- 32a focus result -->
-            <p>You lost <span id="page-33a-update"></span>% focus.</p>
+            <p><span class="first-letter">Y</span>ou lost <span id="page-33a-update"></span>% focus. Riding the bus can provide valuable study time if you play your cards right.</p>
             <form id="page-33a-form">
               <div class="form-group">
                 <h3>It’s fleet week, and the bridge is up!</h3>
@@ -292,7 +295,7 @@
           <div class="col-md-6">
             <h2>On  Your  Bike</h2>
             <p>
-              <span class="user-name"></span>, you are such a rockstar! You’re riding your bike to Epicodus. Points for fitness, but you might be a little sweaty when you arrive.
+              <span class="user-name"></span>, you are such a rockstar! You’re riding your bike to Epicodus. Points for fitness, but you might be a little sweaty when you arrive. Riding your bike can take longer than the bus, so you've lost <strong id="time-lost">30 minutes</strong>.
             </p>
             <button type="button" id="go-to-31b" class="btn">Let's Go!</button>
           </div>
@@ -333,7 +336,7 @@
         <div class="row">
           <div class="col-md-6">
             <!-- 31b focus result -->
-            <p>You lost <span id="page-32b-update"></span>% focus.</p>
+            <p><span class="first-letter">Y</span>ou lost <span id="page-32b-update"></span>% focus. It's best to stay calm and clear headed when you're on your bike.</p>
             <form id="page-32b-form">
               <div class="form-group">
                 <h3>You get a flat tire! What do you do?</h3>
@@ -361,18 +364,18 @@
         <div class="row">
           <div class="col-md-6">
             <!-- 32b money result -->
-            <p>You lost $<span id="page-33b-update"></span>.</p>
+            <p><span class="first-letter">Y</span>ou lost $<span id="page-33b-update"></span> It's best to be prepared for flat tires!</p>
             <form id="page-33b-form">
               <div class="form-group">
                 <h3>You arrive to Epicodus, and you need to park your bike. What do you do?</h3>
                 <div class="radio">
-                  <label><input type="radio" name="time" value="20" checked>You ride your bike down the hall, and the security guard stops and scolds you.</label>
+                  <label><input type="radio" name="time" value="15" checked>You ride your bike down the hall, and the security guard stops and scolds you.</label>
                 </div>
                 <div class="radio">
                   <label><input type="radio" name="time" value="0">You calmly walk your bike to the vault and lock it.</label>
                 </div>
                 <div class="radio">
-                  <label><input type="radio" name="time" value="10">You take your bike down the regular elevator, jeopardizing Epicoudus’ lease, and Perry scolds you!</label>
+                  <label><input type="radio" name="time" value="5">You take your bike down the regular elevator, jeopardizing Epicoudus’ lease, and Perry scolds you!</label>
                 </div>
               </div>
               <button type="submit" id="33b-go-to-40a" class="btn">Go to the Lobby</button>
@@ -387,7 +390,7 @@
       <!-- Page 40a (branch-page)-->
       <div id="page-40a" class="branch-page">
         <!-- 33a or 33b time result (depending on which branch taken) -->
-        <p>You lost <span id="page-40a-update"></span> minutes.</p>
+        <p><span class="first-letter">Y</span>ou lost <span id="page-40a-update"></span> minutes. You have finally made it to the building. You're halfway there!</p>
         <h2>Stairs  or Elevator:  A  Difficult  Decision</h2>
         <p>
           <span class="first-letter">Y</span>ou’ve made it to the lobby, and now you have to decide how to get to the 8th floor. What will you choose?
@@ -412,7 +415,7 @@
           <div class="col-md-6">
             <h2>The  Elevator  Escapades</h2>
             <p>
-              <span class="first-letter">G</span>ood job, <span class="user-name"></span>! You chose the elevator. Let's hope this is a smooth ride to the 8th floor!
+              <span class="first-letter">G</span>ood job, <span class="user-name"></span>! You chose the elevator. Let's hope this is a smooth ride to the 8th floor! Elevators are usually quick, so you've lost <strong id="time-lost">2 minutes</strong> ride time.
             </p>
             <button type="button" id="go-to-51a" class="btn">Let's Go!</button>
           </div>
@@ -453,7 +456,7 @@
         <div class="row">
           <div class="col-md-6">
             <!-- 51a money result -->
-            <p>You lost $<span id="page-52a-update"></span></p>
+            <p><span class="first-letter">Y</span>ou lost $<span id="page-52a-update"></span>. Coffee can be expensive!</p>
             <form id="page-52a-form">
               <div class="form-group">
                 <h3>You get off on the UTI floor. Whoops!</h3>
@@ -481,7 +484,7 @@
         <div class="row">
           <div class="col-md-6">
             <!-- 52a time result -->
-            <p>You lost <span id="page-53a-update"></span> minutes.</p>
+            <p><span class="first-letter">Y</span>ou lost <span id="page-53a-update"></span> minutes. Who knew taking the elevator could take so long?</p>
             <form id="page-53a-form">
               <div class="form-group">
                 <h3>The elevator gets stuck. Help! </h3>
@@ -511,7 +514,7 @@
           <div class="col-md-6">
             <h2>The  Stair  Saga</h2>
             <p>
-              <span class="first-letter">Y</span>ou're such a badass, <span class="user-name"></span>! Not only do you know where the stairs are, you're also fit as a fiddle! Let's go!
+              <span class="first-letter">Y</span>ou're such a badass, <span class="user-name"></span>! Not only do you know where the stairs are, you're also fit as a fiddle! Stairs can be a little slower than the elevator, so you've lost <strong id="time-lost">5 minutes</strong>. Let's go!
             </p>
             <button type="button" id="go-to-51b" class="btn">Let's Go!</button>
           </div>
@@ -552,7 +555,7 @@
         <div class="row">
           <div class="col-md-6">
             <!-- 51b money result -->
-            <p>You lost $<span id="page-52b-update"></span>.</p>
+            <p><span class="first-letter">Y</span>ou lost $<span id="page-52b-update"></span>. Coffee can be expensive!</p>
             <form id="page-52b-form">
               <div class="form-group">
                 <h3>Uh oh! The entire staff of the 9th floor is doing a fire drill and streaming down the stairs. What to do?</h3>
@@ -580,7 +583,7 @@
         <div class="row">
           <div class="col-md-6">
             <!-- 52b time result -->
-            <p>You lost <span id="page-53b-update"></span> minutes.</p>
+            <p><span class="first-letter">Y</span>ou lost <span id="page-53b-update"></span> minutes. That 9th floor has way too many fire drills.</p>
             <form id="page-53b-form">
               <div class="form-group">
                 <h3>How do you best use your time while in the stairwell?</h3>
@@ -608,10 +611,10 @@
         <div class="row">
           <div class="col-md-6">
             <!-- 53a or 53b focus result, depending on which branch taken -->
-            <p>You lost <span id="page-60a-update"></span>% focus.</p>
+            <p><span class="first-letter">Y</span>ou lost <span id="page-60a-update"></span>% focus. Keep it together!</p>
             <h2>The  Partner  Predicament</h2>
             <p>
-              <span class="first-letter">Y</span>ou've made it to Epicodus, <span class="user-name"></span>! Now for the greatest challenge of the morning - finding your partner! You anxiously head towards the entrance to Epicodus.
+              <span class="first-letter">Y</span>ou have made it to Epicodus, <span class="user-name"></span>! Now for the greatest challenge of the morning - finding your partner! You anxiously head towards the entrance to Epicodus.
             </p>
             <button type="button" id="go-to-61a" class="btn">Let's Go!</button>
           </div>
@@ -652,7 +655,7 @@
         <div class="row">
           <div class="col-md-6">
             <!-- 61a focus result -->
-            <p>You lost <span id="page-62a-update"></span>% focus.</p>
+            <p><span class="first-letter">Y</span>ou lost <span id="page-62a-update"></span>% focus. Best to be prepared!</p>
             <form id="page-62a-form">
               <div class="form-group">
                 <h3>Where do you begin your search for a partner?</h3>
@@ -660,7 +663,7 @@
                   <label><input type="radio" name="time" value="0" checked>You act like a gargoyle and guard the Epicodus door, asking everyone who passes to be your partner.</label>
                 </div>
                 <div class="radio">
-                  <label><input type="radio" name="time" value="90">You’re so exhausted that you sit on a couch and stare at your phone blankly.</label>
+                  <label><input type="radio" name="time" value="10">You’re so exhausted that you sit on a couch and stare at your phone blankly.</label>
                 </div>
                 <div class="radio">
                   <label><input type="radio" name="time" value="5">You go to the kitchen and offer up some snacks to a full table, casually mentioning that you need a partner.</label>
@@ -680,7 +683,7 @@
         <div class="row">
           <div class="col-md-6">
             <!-- 62a time result -->
-            <p>You lost <span id="page-63a-update"></span> minutes.</p>
+            <p><span class="first-letter">Y</span>ou lost <span id="page-63a-update"></span> minutes. Hurry up!</p>
             <form id="page-63a-form">
               <div class="form-group">
                 <h3>You haven’t found a partner yet, and you’re getting desperate. What should you do now?</h3>
@@ -710,7 +713,7 @@
         <div class="row">
           <div class="col-md-6">
             <!-- 63a money result -->
-            <p>You lost $<span id="page-70a-update"></span>.</p>
+            <p><span class="first-letter">Y</span>ou lost $<span id="page-70a-update"></span>. Bribery can be expensive! Also, you've lost <strong id="time-lost">5 minutes</strong> finding a partner. Time is ticking!</p>
             <h2>The  Late  Login</h2>
             <p>
             <span class="first-letter">Y</span>ay, <span class="user-name"></span>, you’ve found your partner! You’re almost to the finish line… but not yet!
@@ -731,7 +734,7 @@
               <div class="form-group">
                 <h3>You don’t see any open computers. Where should you go?</h3>
                 <div class="radio">
-                  <label><input type="radio" name="time" value="1" checked>You sneak over to the JavaScript class section and commandeer one of their computers.</label>
+                  <label><input type="radio" name="time" value="0" checked>You sneak over to the JavaScript class section and commandeer one of their computers.</label>
                 </div>
                 <div class="radio">
                   <label><input type="radio" name="time" value="10">You grab a laptop out of your bag and chill on the couch.</label>
@@ -754,7 +757,7 @@
         <div class="row">
           <div class="col-md-6">
             <!-- 71a time result -->
-            <p>You lost <span id="page-72a-update"></span> minutes.</p>
+            <p><span class="first-letter">Y</span>ou lost <span id="page-72a-update"></span> minutes. Be sure to arrive early to get a computer.</p>
             <form id="page-72a-form">
               <div class="form-group">
                 <h3>You’ve forgotten your login for Epicodus! What now?</h3>
@@ -782,7 +785,7 @@
         <div class="row">
           <div class="col-md-6">
             <!-- 72a focus result -->
-            <p>You lost <span id="page-73a-update"></span>% focus.</p>
+            <p><span class="first-letter">Y</span>ou lost <span id="page-73a-update"></span>% focus. Always remember your login!</p>
             <form id="page-73a-form">
               <div class="form-group">
                 <h3>You and your partner have finally logged in, but your partner is now slumped over on the desk taking a nap.</h3>
@@ -844,36 +847,39 @@
         <!-- 0-100 	Not so good -->
         <div id="high-score">
           <!-- 73a money result -->
-          <p>You lost $<span id="page-high-score-update"></span>.</p>
+          <p><span class="first-letter">Y</span>ou lost $<span id="page-high-score-update"></span>. At least your partner is awake!</p>
           <h3>High Score</h3>
           <img src="img/landing/cat-programmer.jpg" alt="a cat using a macbook" class="medium-image">
           <p>
-            <span class="first-letter">G</span>reat job, <span class="user-name"></span>. You got <span class= "scoreboard-score"></span> points. You're definitely a pro epicoder!
+            <span class="first-letter">G</span>reat job, <span class="user-name"></span>. You got <span class= "scoreboard-score"></span> bonus points. You're definitely a pro epicoder!
           </p>
           <hr>
         </div>
         <!-- 100-199	Ok -->
         <div id="medium-score">
           <!-- 73a money result -->
-          <p>You lost $<span id="page-medium-score-update"></span>.</p>
+          <p><span class="first-letter">Y</span>ou lost $<span id="page-medium-score-update"></span>. At least your partner is awake!</p>
           <h3>Medium Score</h3>
           <img src="img/landing/cat-programmer.jpg" alt="a cat using a macbook" class="medium-image">
           <p>
-            <span class="first-letter">P</span>retty good, <span class="user-name"></span>. You got <span class= "scoreboard-score"></span> points. You have some room for improvement, but you're on your way.
+            <span class="first-letter">P</span>retty good, <span class="user-name"></span>. You made it to login and you got <span class= "scoreboard-score"></span> bonus points. You have some room for improvement, but you're on your way.
           </p>
           <hr>
         </div>
         <!-- 0-100 	Not so good -->
         <div id="low-score">
           <!-- 73a money result -->
-          <p>You lost $<span id="page-low-score-update"></span>.</p>
+          <p><span class="first-letter">Y</span>ou lost $<span id="page-low-score-update"></span>. At least your partner is awake!</p>
           <h3>Low Score</h3>
           <img src="img/landing/cat-programmer.jpg" alt="a cat using a macbook" class="medium-image">
           <p>
-            <span class="first-letter">B</span>etter luck next time, <span class="user-name"></span>. You got <span class= "scoreboard-score"></span> points. You should spend some more time thinking about your life choices.
+            <span class="first-letter">B</span>etter luck next time, <span class="user-name"></span>. You only got <span class= "scoreboard-score"></span> bonus points. You should spend some more time thinking about your life choices. At least you made it to login! ;)
           </p>
           <hr>
         </div>
+        <ul id="high-scores">
+
+        </ul>
       </div>
     </div>
   </body>

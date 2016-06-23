@@ -53,6 +53,10 @@ body {
   font-family: 'Quantico', sans-serif;
 }
 
+div {
+  margin-bottom: 3vh;
+}
+
 h1 {
   color: #7D0505;
   font-family: 'Monoton', cursive;

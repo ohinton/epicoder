@@ -21,6 +21,7 @@ Player.prototype.calculateMoney = function (money) {
 
 Player.prototype.calculateScore = function () {
   return this.playerScore = this.playerFocus + (this.playerMoney*10) + (this.playerTime*10);
+  console.log(this.PlayerScore);
 }
 
 // high scores
@@ -35,7 +36,6 @@ var highScoreGenerator = function(playerScore) {
   }
   return highScores;
 }
-
 
 // updateScoreboard
 function updateScoreboard (name, focus, time, money) {
@@ -111,8 +111,6 @@ $(document).ready(function() {
     event.preventDefault();
     var time = parseInt($("#page-12a-form input:radio[name=time]:checked").val());
     newPlayer.calculateTime(time);
-
-    // newPlayer.playerTime -= 5;
     updateScoreboard();
     $("#page-12a").hide();
     $("#page-13a-update").text(time);
@@ -124,7 +122,7 @@ $(document).ready(function() {
     event.preventDefault();
     var money = parseInt($("#page-13a-form input:radio[name=money]:checked").val());
     newPlayer.calculateMoney(money);
-
+    newPlayer.playerTime -= 20;
     updateScoreboard();
     loserDetector();
     $("#page-13a").hide();
@@ -136,12 +134,16 @@ $(document).ready(function() {
   $("#go-to-30a").click(function(event){
     event.preventDefault();
     $("#page-20a").hide();
+    newPlayer.playerTime -= 20;
+    updateScoreboard();
     $("#page-30a").show();
   });
 
   $("#go-to-30b").click(function(event){
     event.preventDefault();
     $("#page-20a").hide();
+    newPlayer.playerTime -= 30;
+    updateScoreboard();
     $("#page-30b").show();
   });
 
@@ -241,12 +243,16 @@ $(document).ready(function() {
   $("#go-to-50a").click(function(event){
     event.preventDefault();
     $("#page-40a").hide();
+    newPlayer.playerTime -= 2;
+    updateScoreboard();
     $("#page-50a").show();
   });
 
   $("#go-to-50b").click(function(event){
     event.preventDefault();
     $("#page-40a").hide();
+    newPlayer.playerTime -= 5;
+    updateScoreboard();
     $("#page-50b").show();
   });
 
@@ -386,6 +392,7 @@ $(document).ready(function() {
     loserDetector();
     $("#page-63a").hide();
     $("#page-70a-update").text(money);
+    newPlayer.playerTime -= 5;
     $("#page-70a").show();
   });
 
@@ -425,17 +432,17 @@ $(document).ready(function() {
 //page 73a
   $("#go-to-finish").click(function(event){
     event.preventDefault();
+
     var money = parseInt($("#page-73a-form input:radio[name=money]:checked").val());
     newPlayer.calculateMoney(money);
-
     newPlayer.calculateScore();
+
     $("#your-score").text(newPlayer.playerScore);
     var playerScore = newPlayer.playerScore;
     var highScores = highScoreGenerator(playerScore);
-
-    highScores.forEach(function(score) {
-      $("#high-scores").append("<li>" + score "</li>");
-    })
+    // highScores.forEach(function(score) {
+    //   $("#high-scores").append("<li>" newPlayer.playerName + " : " + score + "</li>");
+    // });
 
     updateScoreboard();
     $("#page-73a").hide();

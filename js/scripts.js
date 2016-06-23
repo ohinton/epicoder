@@ -64,7 +64,7 @@ function loserDetector () {
   } else if (newPlayer.playerMoney <=0) {
     $("#question-pages").hide();
     newPlayer.playerTime = 0;
-    updateScoreboard(); 
+    updateScoreboard();
     $("#money-loser").show();
   }
 }
@@ -434,7 +434,7 @@ $(document).ready(function() {
     var highScores = highScoreGenerator(playerScore);
 
     highScores.forEach(function(score) {
-      $("#high-scores").append
+      $("#high-scores").append("<li>" + score "</li>");
     })
 
     updateScoreboard();

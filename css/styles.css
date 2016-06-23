@@ -6,7 +6,7 @@
 font-family: 'Quantico', sans-serif;
 
 font-family: 'Monoton', cursive;*/
-/*
+
 #page-10a, #page-11a, #page-12a, #page-13a {
   display: none;
 }
@@ -37,16 +37,16 @@ font-family: 'Monoton', cursive;*/
 
 #page-final, #low-score, #medium-score, #high-score, #instruction-page, #money-loser, #focus-loser, #time-loser, #scoreboard-header{
   display: none;
-}*/
+}
 
 
-/*#focus-loser, #time-loser, #money-loser {
+#focus-loser, #time-loser, #money-loser {
   display: none;
-}*/
+}
 
-/*#scoreboard-header {
+#scoreboard-header {
   display: none;
-}*/
+}
 
 body {
   background-color: #EDEECB;

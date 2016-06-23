@@ -66,10 +66,6 @@ h2 {
   text-align: center;
 }
 
-.scoreboard-name {
-  font-family: 'Monoton', cursive;
-}
-
 h3 {
   color: #7D0505;
 }
@@ -135,6 +131,14 @@ ul {
 }
 
 /*Scoreboard Styles*/
+.scoreboard-name {
+  font-family: 'Monoton', cursive;
+}
+
+.nav-tabs li {
+  margin-left: 2vw;
+}
+
 #scoreboard-header {
   font-family: 'Allerta Stencil', sans-serif;
   margin-top: 3vh;
@@ -152,11 +156,6 @@ ul {
 .user-name {
   color: #7D0505;
   text-align: left;
-}
-
-/*Scoreboard Header Styles*/
-.nav-tabs li {
-  margin-left: 20px;
 }
 
 /*Landing Page Styles*/

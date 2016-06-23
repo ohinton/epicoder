@@ -37,9 +37,6 @@ var highScoreGenerator = function(playerScore) {
   return highScores;
 }
 
-var storageObject = {};
-storageObject.setItem(highScores, )
-
 // updateScoreboard
 function updateScoreboard (name, focus, time, money) {
   $(".user-name").text(newPlayer.playerName);
@@ -435,20 +432,17 @@ $(document).ready(function() {
 //page 73a
   $("#go-to-finish").click(function(event){
     event.preventDefault();
-    debugger;
+
     var money = parseInt($("#page-73a-form input:radio[name=money]:checked").val());
     newPlayer.calculateMoney(money);
     newPlayer.calculateScore();
 
     $("#your-score").text(newPlayer.playerScore);
-    console.log(newPlayer.playerScore);
     var playerScore = newPlayer.playerScore;
-    console.log(playerScore);
     var highScores = highScoreGenerator(playerScore);
-    console.log(highScores);
-    highScores.forEach(function(score) {
-      $("#high-scores").append("<li>" newPlayer.playerName + " : " + score + "</li>");
-    });
+    // highScores.forEach(function(score) {
+    //   $("#high-scores").append("<li>" newPlayer.playerName + " : " + score + "</li>");
+    // });
 
     updateScoreboard();
     $("#page-73a").hide();

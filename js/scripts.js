@@ -40,7 +40,8 @@ var highScoreGenerator = function(playerScore) {
 // updateScoreboard
 function updateScoreboard (name, focus, time, money) {
   $(".user-name").text(newPlayer.playerName);
-  $(".scoreboard-focus").text(newPlayer.playerFocus);
+  var f = newPlayer.playerFocus;
+  $(".scoreboard-focus").text(f + "%");
   var t = newPlayer.playerTime;
   var hours = Math.floor(t / 60);
   var minutes = t % 60;
@@ -52,12 +53,18 @@ function updateScoreboard (name, focus, time, money) {
 function loserDetector () {
   if (newPlayer.playerFocus <= 0) {
     $("#question-pages").hide();
+    newPlayer.playerTime = 0;
+    updateScoreboard();
     $("#focus-loser").show();
   } else if (newPlayer.playerTime <= 0) {
     $("#question-pages").hide();
+    newPlayer.playerTime = 0;
+    updateScoreboard();
     $("#time-loser").show();
   } else if (newPlayer.playerMoney <=0) {
     $("#question-pages").hide();
+    newPlayer.playerTime = 0;
+    updateScoreboard(); 
     $("#money-loser").show();
   }
 }
@@ -205,7 +212,7 @@ $(document).ready(function() {
   });
 
 //page 32b
-  $("#go-to-32b").click(function(event){
+  $("#go-to-33b").click(function(event){
     event.preventDefault();
     var money = parseInt($("#page-32b-form input:radio[name=money]:checked").val());
     newPlayer.calculateMoney(money);

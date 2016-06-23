@@ -433,9 +433,9 @@ $(document).ready(function() {
     var playerScore = newPlayer.playerScore;
     var highScores = highScoreGenerator(playerScore);
 
-    highScores.forEach(function(score) {
-      $("#high-scores").append("<li>" + score "</li>");
-    })
+    // highScores.forEach(function(score) {
+    //   $("#high-scores").append("<li>" + score "</li>");
+    // })
 
     updateScoreboard();
     $("#page-73a").hide();

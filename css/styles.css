@@ -149,6 +149,9 @@ ul {
 }
 
 /*Page Styles*/
+#your-score {
+  font-family: 'Monoton', cursive;
+}
 .output-color {
   color: #7D0505;
 }
@@ -177,11 +180,27 @@ ul {
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-#landing-page img, #instruction-page img {
-  max-width: 60vw;
+#landing-page img {
+  max-width: 45vw;
   display: block;
   margin: 0 auto 20px;
   border: 5px solid black;
+}
+
+#instruction-page img {
+  max-height: 40vh;
+  display: block;
+  margin: 0 auto 20px;
+  border: 5px solid black;
+}
+
+#instruction-page h2 {
+  color: #7D0505;
+  font-family: 'Quantico', sans-serif;
+  font-size: 3em;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 #get-user-name {
@@ -193,9 +212,4 @@ ul {
   max-width: 50vw;
   display: block;
   margin: auto;
-}
-
-/*Branch Page Styles*/
-.branch-page{
-  text-align: center;
 }

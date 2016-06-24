@@ -17,9 +17,8 @@
 
       <!-- Landing Page -->
       <div id="landing-page">
-        <h1>Choose Your Own Adventure</h1>
-        <img src="img/landing-page.jpg" alt="Epicoder Landing image">
-        <h2>Episode 1: Epicoder</h2>
+        <img src="img/landing.jpg" alt="Epicoder Landing image">
+        <h2>Episode 1: Get to School on Time</h2>
         <form id="get-user-name">
           <div class="form-group">
             <label for="new-user-name">Please enter your name:</label>
@@ -32,7 +31,8 @@
 
       <!-- Instructions -->
       <div id="instruction-page">
-        <h1>Your Mission</h1>
+        <h1>Your Mission:</h1>
+        <h2>Log in Before 8:00 am</h2>
         <img src="img/instruction-page.jpg" alt="the Epicodus building">
         <p>
           <span class="first-letter">H</span>ello, <span class="user-name"></span>, and welcome to the Epicoder game, where you decide your own fate by making key choices.
@@ -42,12 +42,12 @@
         </p>
         <ul>
           <li><strong>Goal:</strong> Get to Epicodus to log in before <strong>8:00 am</strong>.</li>
-          <li><strong>Time:</strong>You have <strong>1 hour &amp; 30 minutes</strong> to get to class.</li>
-          <li><strong>Money:</strong>You have <strong>$10</strong> to spend.</li>
-          <li><strong>Focus:</strong>You will start with <strong>100%</strong> focus.</li>
+          <li><strong>Time:</strong> You have <strong>1 hour &amp; 30 minutes</strong> to get to class.</li>
+          <li><strong>Money:</strong> You have <strong>$10</strong> to spend.</li>
+          <li><strong>Focus:</strong> You will start with <strong>100%</strong> focus.</li>
         </ul>
         <p>
-          If you lose all your time, focus, or money, you will have to miss a day of class and start over. Save more time, focus, and money to get bonus points at the end of the game. Good luck!
+          If you lose all your time, focus, or money, you will have to miss a day of class and start over. Save more time, focus, and money to get bonus points at the end of the game. <strong>Good luck!</strong>
         </p>
         <button type="submit" id="go-to-10a" class="btn">Ready?</button>
       </div>
@@ -77,7 +77,7 @@
             <button type="button" id="go-to-11a" class="btn">Let's Go!</button>
           </div>
           <div class="col-md-6">
-            <img src="img/10a.jpg" alt="Image of an Epicoder sleeping">
+            <img src="img/10aa.jpg" alt="Image of an Epicoder sleeping">
           </div>
         </div>
         <hr>
@@ -104,7 +104,7 @@
             </form>
           </div>
           <div class="col-md-6">
-            <img src="img/11a.jpg" alt="a group of girls out on the town">
+            <img src="img/11aa.jpg" alt="a group of girls out on the town">
           </div>
         </div>
         <hr>
@@ -114,7 +114,7 @@
         <div class="row">
           <div class="col-md-6">
             <!-- page 11a Focus result -->
-            <p><span class="first-letter">Y</span>ou lost <span id="page-12a-update"></span>% focus. Sleep is pretty important! It helps you keep up your focus. Let's see how quickly you can get out of bed now.</p>
+            <p><span class="first-letter">Y</span>ou lost <span id="page-12a-update" class="output-color"></span><strong>%</strong> focus. Sleep is pretty important! Let's see how quickly you can get out of bed now.</p>
             <form id="page-12a-form">
               <div class="form-group">
                 <h3>Wake Up!</h3>
@@ -132,7 +132,7 @@
             </form>
           </div>
           <div class="col-md-6">
-            <img src="img/12aa.jpg" alt="an alamclok">
+            <img src="img/12a1.jpg" alt="an alamclok">
           </div>
         </div>
         <hr>
@@ -142,7 +142,7 @@
         <div class="row">
           <div class="col-md-6">
             <!-- Page 12a Time result -->
-            <p><span class="first-letter">Y</span>ou lost <span id="page-13a-update"></span> minutes. It's best to wake up bright and early to save time!</p>
+            <p><span class="first-letter">Y</span>ou lost <span id="page-13a-update" class="output-color"></span> <strong>minutes</strong>. It's best to wake up bright and early to save time!</p>
             <form id="page-13a-form">
               <div class="form-group">
                 <h3>Breakfast Time</h3>
@@ -160,7 +160,7 @@
             </form>
           </div>
           <div class="col-md-6">
-            <img src="img/13aaa.jpg" alt="Epicodus students in the bike hall">
+            <img src="img/13abb.jpg" alt="Epicodus students in the bike hall">
           </div>
         </div>
         <hr>
@@ -172,7 +172,7 @@
               <img src="img/13aaaa.jpg" alt="Epicodus students in the bike hall">
           </div>
           <div class="col-md-4">
-            <img src="img/13abb.jpg" alt="Epicodus students in the bike hall">
+            <img src="img/13aa.jpg" alt="Epicodus students in the bike hall">
           </div>
         </div>
         <hr>
@@ -181,7 +181,7 @@
       <!-- Page 20a (Branch Page)-->
       <div id="page-20a" class="branch-page">
         <!-- page 13a money result -->
-        <p><span class="first-letter">Y</span>ou lost $<span id="page-20a-update"></span>. Conserve your cash for the rest of the day! Waking up and getting out the door usually takes time, so you've lost <strong id="time-lost">20 minutes</strong>.</p>
+        <p><span class="first-letter">Y</span>ou spent <strong>$</strong><span id="page-20a-update"  class="output-color"></span>. Conserve your cash for the rest of the day! Waking up and getting out the door usually takes time, so you've lost <strong id="time-lost">20 minutes</strong>.</p>
         <h2>Transportation</h2>
         <p>
           <span class="first-letter">Y</span>ou’re out of the house and now you have to decide how to get downtown. What will you do?
@@ -248,7 +248,7 @@
         <div class="row">
           <div class="col-md-6">
             <!-- 31a money result -->
-            <p><span class="first-letter">Y</span>ou lost $<span id="page-32a-update"></span>. The bus can be expensive!</p>
+            <p><span class="first-letter">Y</span>ou spent <strong>$</strong><span id="page-32a-update" class="output-color"></span>. The bus can be expensive!</p>
             <form id="page-32a-form">
               <div class="form-group">
                 <h3>The bus is super crowded, what should you do?</h3>
@@ -277,7 +277,7 @@
         <div class="row">
           <div class="col-md-6">
             <!-- 32a focus result -->
-            <p><span class="first-letter">Y</span>ou lost <span id="page-33a-update"></span>% focus. Riding the bus can provide valuable study time if you play your cards right.</p>
+            <p><span class="first-letter">Y</span>ou lost <span id="page-33a-update" class="output-color"></span><strong>%</strong> focus. Riding the bus can provide valuable study time if you play your cards right.</p>
             <form id="page-33a-form">
               <div class="form-group">
                 <h3>It’s fleet week, and the bridge is up!</h3>
@@ -348,7 +348,7 @@
         <div class="row">
           <div class="col-md-6">
             <!-- 31b focus result -->
-            <p><span class="first-letter">Y</span>ou lost <span id="page-32b-update"></span>% focus. It's best to stay calm and clear headed when you're on your bike.</p>
+            <p><span class="first-letter">Y</span>ou lost <span id="page-32b-update" class="output-color"></span><strong>%</strong> focus. It's best to stay calm and clear headed when you're on your bike.</p>
             <form id="page-32b-form">
               <div class="form-group">
                 <h3>You get a flat tire! What do you do?</h3>
@@ -356,7 +356,7 @@
                   <label><input type="radio" name="money" value="0" checked>You have a tire kit in your bag, so you fix the flat and go on your way.</label>
                 </div>
                 <div class="radio">
-                  <label><input type="radio" name="money" value="2.50">You phone AAA to come get you, however it's going to be over an hour, so you have to throw your bike on the nearest bus.</label>
+                  <label><input type="radio" name="money" value="2.50">You phone AAA to come get you; however, it's going to be over an hour, so you have to throw your bike on the nearest bus.</label>
                 </div>
                 <div class="radio">
                   <label><input type="radio" name="money" value="0">You push your bike the whole way to Epicodus.</label>
@@ -376,7 +376,7 @@
         <div class="row">
           <div class="col-md-6">
             <!-- 32b money result -->
-            <p><span class="first-letter">Y</span>ou lost $<span id="page-33b-update"></span> It's best to be prepared for flat tires!</p>
+            <p><span class="first-letter">Y</span>ou spent <strong>$</strong><span id="page-33b-update" class="output-color"></span>. It's best to be prepared for flat tires!</p>
             <form id="page-33b-form">
               <div class="form-group">
                 <h3>You arrive to Epicodus, and you need to park your bike. What do you do?</h3>
@@ -394,13 +394,13 @@
             </form>
           </div>
           <div class="col-md-6">
-            <img src="img/33bbb.jpg" alt="Epicodus students in the bike hall">
+            <img src="img/33b.jpg" alt="Epicodus students in the bike hall">
           </div>
         </div>
         <hr>
         <div class="row">
           <div class="col-md-4">
-            <img src="img/33b.jpg" alt="Epicodus students in the bike hall">
+            <img src="img/33bbb.jpg" alt="Epicodus students in the bike hall">
           </div>
           <div class="col-md-4">
             <img src="img/33bb.jpg" alt="Epicodus students in the bike hall">
@@ -414,14 +414,14 @@
       <!-- Page 40a (branch-page)-->
       <div id="page-40a" class="branch-page">
         <!-- 33a or 33b time result (depending on which branch taken) -->
-        <p><span class="first-letter">Y</span>ou lost <span id="page-40a-update"></span> minutes. You have finally made it to the building. You're halfway there!</p>
+        <p><span class="first-letter">Y</span>ou lost <span id="page-40a-update" class="output-color"></span> <strong>minutes</strong>. You have finally made it to the building. You're halfway there!</p>
         <h2>Stairs  or Elevator:  A  Difficult  Decision</h2>
         <p>
           <span class="first-letter">Y</span>ou’ve made it to the lobby, and now you have to decide how to get to the 8th floor. What will you choose?
         </p>
         <div class="row">
           <div class="col-md-6">
-            <img src="img/40a-elevators.jpg" alt="some elevators">
+            <img src="img/40a.jpg" alt="some elevators">
             <br>
             <button id="go-to-50a" type="button" class="btn">Take the Elevator</button>
           </div>
@@ -474,13 +474,24 @@
           </div>
         </div>
         <hr>
+        <div class="row">
+          <div class="col-md-4">
+            <img src="img/folgers.jpg" alt="Epicodus students in the bike hall">
+          </div>
+          <div class="col-md-4">
+            <img src="img/starbucks2.jpg" alt="Epicodus students in the bike hall">
+          </div>
+          <div class="col-md-4">
+            <img src="img/spella.jpg" alt="Epicodus students in the bike hall">
+          </div>
+        </div>
       </div>
       <!-- page 52a (time)-->
       <div id="page-52a">
         <div class="row">
           <div class="col-md-6">
             <!-- 51a money result -->
-            <p><span class="first-letter">Y</span>ou lost $<span id="page-52a-update"></span>. Coffee can be expensive!</p>
+            <p><span class="first-letter">Y</span>ou spent <strong>$</strong><span id="page-52a-update" class="output-color"></span>. Coffee can be expensive!</p>
             <form id="page-52a-form">
               <div class="form-group">
                 <h3>You get off on the UTI floor. Whoops!</h3>
@@ -508,7 +519,7 @@
         <div class="row">
           <div class="col-md-6">
             <!-- 52a time result -->
-            <p><span class="first-letter">Y</span>ou lost <span id="page-53a-update"></span> minutes. Who knew taking the elevator could take so long?</p>
+            <p><span class="first-letter">Y</span>ou lost <span id="page-53a-update" class="output-color"></span> <strong>minutes</strong>. Who knew taking the elevator could take so long?</p>
             <form id="page-53a-form">
               <div class="form-group">
                 <h3>The elevator gets stuck. Help! </h3>
@@ -532,7 +543,7 @@
         <hr>
         <div class="row">
           <div class="col-md-4">
-            <img src="img/53a.jpg" alt="breakfast">
+            <img src="img/fire.jpg" alt="breakfast">
           </div>
           <div class="col-md-4">
               <img src="img/53aaa.jpg" alt="Epicodus students in the bike hall">
@@ -584,13 +595,24 @@
           </div>
         </div>
         <hr>
+        <div class="row">
+          <div class="col-md-4">
+            <img src="img/folgers.jpg" alt="Epicodus students in the bike hall">
+          </div>
+          <div class="col-md-4">
+            <img src="img/starbucks2.jpg" alt="Epicodus students in the bike hall">
+          </div>
+          <div class="col-md-4">
+            <img src="img/spella.jpg" alt="Epicodus students in the bike hall">
+          </div>
+        </div>
       </div>
       <!-- page 52b (time)-->
       <div id="page-52b">
         <div class="row">
           <div class="col-md-6">
             <!-- 51b money result -->
-            <p><span class="first-letter">Y</span>ou lost $<span id="page-52b-update"></span>. Coffee can be expensive!</p>
+            <p><span class="first-letter">Y</span>ou spent <strong>$</strong><span id="page-52b-update" class="output-color"></span>. Coffee can be expensive!</p>
             <form id="page-52b-form">
               <div class="form-group">
                 <h3>Uh oh! The entire staff of the 9th floor is doing a fire drill and streaming down the stairs. What to do?</h3>
@@ -608,7 +630,7 @@
             </form>
           </div>
           <div class="col-md-6">
-            <img src="img/52b.jpg" alt="a cat using a macbook">
+            <img src="img/53b.jpg" alt="a cat using a macbook">
           </div>
         </div>
         <hr>
@@ -618,7 +640,7 @@
         <div class="row">
           <div class="col-md-6">
             <!-- 52b time result -->
-            <p><span class="first-letter">Y</span>ou lost <span id="page-53b-update"></span> minutes. That 9th floor has way too many fire drills.</p>
+            <p><span class="first-letter">Y</span>ou lost <span id="page-53b-update" class="output-color"></span> <strong>minutes</strong>. That 9th floor has way too many fire drills.</p>
             <form id="page-53b-form">
               <div class="form-group">
                 <h3>How do you best use your time while in the stairwell?</h3>
@@ -636,7 +658,7 @@
             </form>
           </div>
           <div class="col-md-6">
-            <img src="img/53b.jpg" alt="a cat using a macbook">
+            <img src="img/52b.jpg" alt="a cat using a macbook">
           </div>
         </div>
         <hr>
@@ -646,10 +668,10 @@
         <div class="row">
           <div class="col-md-6">
             <!-- 53a or 53b focus result, depending on which branch taken -->
-            <p><span class="first-letter">Y</span>ou lost <span id="page-60a-update"></span>% focus. Keep it together!</p>
+            <p><span class="first-letter">Y</span>ou lost <span id="page-60a-update" class="output-color"></span><strong>%</strong> focus. Keep it together!</p>
             <h2>The  Partner  Predicament</h2>
             <p>
-              <span class="first-letter">Y</span>ou have made it to Epicodus, <span class="user-name"></span>! Now for the greatest challenge of the morning - finding your partner! You anxiously head towards the entrance to Epicodus.
+              <span class="first-letter">Y</span>ou have made it to Epicodus, <span class="user-name"></span>! Now for the greatest challenge of the morning &mdash; finding your partner! You anxiously head towards the entrance to Epicodus.
             </p>
             <button type="button" id="go-to-61a" class="btn">Let's Go!</button>
           </div>
@@ -667,7 +689,7 @@
               <div class="form-group">
                 <h3>How prepared are you for today’s lesson?</h3>
                 <div class="radio">
-                  <label><input type="radio" name="focus" value="60" checked>You’re still figuring out how to log in to treehouse.</label>
+                  <label><input type="radio" name="focus" value="60" checked>You’re still figuring out how to log in to Treehouse.</label>
                 </div>
                 <div class="radio">
                   <label><input type="radio" name="focus" value="0">You’ve watched the entire Treehouse deep dive on today’s topic, you’ve completed the homework, and you’ve looked ahead at today’s lesson.</label>
@@ -690,7 +712,7 @@
         <div class="row">
           <div class="col-md-6">
             <!-- 61a focus result -->
-            <p><span class="first-letter">Y</span>ou lost <span id="page-62a-update"></span>% focus. Best to be prepared!</p>
+            <p><span class="first-letter">Y</span>ou lost <span id="page-62a-update" class="output-color"></span><strong>%</strong> focus. Best to be prepared!</p>
             <form id="page-62a-form">
               <div class="form-group">
                 <h3>Where do you begin your search for a partner?</h3>
@@ -718,7 +740,7 @@
         <div class="row">
           <div class="col-md-6">
             <!-- 62a time result -->
-            <p><span class="first-letter">Y</span>ou lost <span id="page-63a-update"></span> minutes. Hurry up!</p>
+            <p><span class="first-letter">Y</span>ou lost <span id="page-63a-update" class="output-color"></span> <strong>minutes</strong>. Hurry up!</p>
             <form id="page-63a-form">
               <div class="form-group">
                 <h3>You haven’t found a partner yet, and you’re getting desperate. What should you do now?</h3>
@@ -748,7 +770,7 @@
         <div class="row">
           <div class="col-md-6">
             <!-- 63a money result -->
-            <p><span class="first-letter">Y</span>ou lost $<span id="page-70a-update"></span>. Bribery can be expensive! Also, you've lost <strong id="time-lost">5 minutes</strong> finding a partner. Time is ticking!</p>
+            <p><span class="first-letter">Y</span>ou spent <strong>$</strong><span id="page-70a-update" class="output-color"></span>. Bribery can be expensive! Also, you've lost <strong id="time-lost">5 minutes</strong> finding a partner. Time is ticking!</p>
             <h2>The  Late  Login</h2>
             <p>
             <span class="first-letter">Y</span>ay, <span class="user-name"></span>, you’ve found your partner! You’re almost to the finish line… but not yet!
@@ -792,7 +814,7 @@
         <div class="row">
           <div class="col-md-6">
             <!-- 71a time result -->
-            <p><span class="first-letter">Y</span>ou lost <span id="page-72a-update"></span> minutes. Be sure to arrive early to get a computer.</p>
+            <p><span class="first-letter">Y</span>ou lost <span id="page-72a-update" class="output-color"></span> <strong>minutes</strong>. Be sure to arrive early to get a computer.</p>
             <form id="page-72a-form">
               <div class="form-group">
                 <h3>You’ve forgotten your login for Epicodus! What now?</h3>
@@ -820,7 +842,7 @@
         <div class="row">
           <div class="col-md-6">
             <!-- 72a focus result -->
-            <p><span class="first-letter">Y</span>ou lost <span id="page-73a-update"></span>% focus. Always remember your login!</p>
+            <p><span class="first-letter">Y</span>ou lost <span id="page-73a-update" class="output-color"></span><strong>%</strong> focus. Always remember your login!</p>
             <form id="page-73a-form">
               <div class="form-group">
                 <h3>You and your partner have finally logged in, but your partner is now slumped over on the desk taking a nap.</h3>
@@ -849,7 +871,7 @@
     <div id="loser-pages">
       <div id="money-loser">
         <h2>You Lost!</h2>
-        <img src="img/money-loser.jpg" alt="a cat using a macbook" class="medium-image">
+        <img src="img/loser-money.jpg" alt="a cat using a macbook" class="medium-image">
         <p>
           <span class="first-letter">O</span>h no, <span class="user-name"></span>. You went over your ten dollar budget and had to bust out your credit cards. This is not a good start to the day. Better try again.
         </p>
@@ -882,40 +904,45 @@
         <!-- 0-100 	Not so good -->
         <div id="high-score">
           <!-- 73a money result -->
-          <p><span class="first-letter">Y</span>ou lost $<span id="page-high-score-update"></span>. At least your partner is awake!</p>
           <h3>High Score</h3>
-          <img src="img/high-score.jpg" alt="High Score" class="medium-image">
+          <img src="img/high-score1.jpg" alt="High Score" class="medium-image">
           <p>
             <span class="first-letter">G</span>reat job, <span class="user-name"></span>. You got <span class= "scoreboard-score"></span> bonus points. You're definitely a pro epicoder!
           </p>
+          <h2>Your score: <span class="your-score"></span></h2>
+          <br>
+          <br>
+          <button type="button" class="btn start-over">Play Again</button>
           <hr>
         </div>
         <!-- 100-199	Ok -->
         <div id="medium-score">
           <!-- 73a money result -->
-          <p><span class="first-letter">Y</span>ou lost $<span id="page-medium-score-update"></span>. At least your partner is awake!</p>
           <h3>Medium Score</h3>
           <img src="img/medium-score.jpg" alt="a cat using a macbook" class="medium-image">
           <p>
             <span class="first-letter">P</span>retty good, <span class="user-name"></span>. You made it to login and you got <span class= "scoreboard-score"></span> bonus points. You have some room for improvement, but you're on your way.
           </p>
+          <h2>Your score: <span class="your-score"></span></h2>
+          <br>
+          <br>
+          <button type="button" class="btn start-over">Play Again</button>
           <hr>
         </div>
         <!-- 0-100 	Not so good -->
         <div id="low-score">
           <!-- 73a money result -->
-          <p><span class="first-letter">Y</span>ou lost $<span id="page-low-score-update"></span>. At least your partner is awake!</p>
           <h3>Low Score</h3>
-          <img src="img/low-score.jpg" alt="a cat using a macbook" class="medium-image">
+          <img src="img/low-score1.jpg" alt="a cat using a macbook" class="medium-image">
           <p>
             <span class="first-letter">B</span>etter luck next time, <span class="user-name"></span>. You only got <span class= "scoreboard-score"></span> bonus points. You should spend some more time thinking about your life choices. At least you made it to login! ;)
           </p>
+          <h2>Your score: <span class="your-score"></span></h2>
+          <br>
+          <br>
+          <button type="button" class="btn start-over">Play Again</button>
           <hr>
         </div>
-        <p>Your score: <span id="your-score"></span></p>
-        <p>High Scores: <ul id="high-scores"></p>
-
-        </ul>
       </div>
     </div>
   </body>

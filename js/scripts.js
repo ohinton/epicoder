@@ -387,12 +387,11 @@ $(document).ready(function() {
     event.preventDefault();
     var money = parseInt($("#page-63a-form input:radio[name=money]:checked").val());
     newPlayer.calculateMoney(money);
-
+    newPlayer.playerTime -= 5;
     updateScoreboard();
     loserDetector();
     $("#page-63a").hide();
     $("#page-70a-update").text(money);
-    newPlayer.playerTime -= 5;
     $("#page-70a").show();
   });
 
@@ -437,7 +436,7 @@ $(document).ready(function() {
     newPlayer.calculateMoney(money);
     newPlayer.calculateScore();
 
-    $("#your-score").text(newPlayer.playerScore);
+    $(".your-score").text(newPlayer.playerScore);
     var playerScore = newPlayer.playerScore;
     var highScores = highScoreGenerator(playerScore);
 

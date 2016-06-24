@@ -1,28 +1,39 @@
 # _Epicoder Game_
 
-#### By _Olivia Hinton, Noah Yasskin, Stephanie Gurung and Maldon Meehan | Date: June 20, 2016_
+#### By _Olivia Hinton, Noah Yasskin, Stephanie Gurung and Maldon Meehan | Date: June 24, 2016_
 
 ## Description
 
-_Intro to Programing: Final Group project_
-_A choose your own adventure game: How to get to Epicodus._
+_Intro to Programming: Final Group Project_
+
+_A Choose your own Adventure Game: How to get to Epicodus_
 
 ## Specs
 | Behavior        | Input           | Outcome  |
 | ------------- |:-------------:| -----:|
 | A user inputs their name | Mike | Welcome to Epicodus, Mike
-| A user have a variety of options for their adventure | choose: Wake up early | gain 10 focus points
+| A user has a variety of options for their adventure | choose: Wake up late | lose 10 minutes displayed in story
+| A scoreboard updates after user choices are submitted | choose: Wake up late |  scoreboard updated to reflect 10 minutes lost
 | A user can choose one of two travel options | choose: take the bus | taken to take the bus page
-| A user can see their updates score on the scoreboard.| click the choices | Total score: 20
-| A user can see their round score on the scoreboard. | click the choices | Round total: 10 Total score: 30
-| A user can see feedback on their final score. | Click final challenge | Good Job, You're a great Epicoder
+| A user can see their bonus score on the final page | finish the game | Final Score: 200
+| A user can play again if they lose or win | Click 'Play Again' | game resets
+
+## Future Features
+
+* _Carousels to add some more photos and dynamism _
+* _A code challenge at the end to beat the game_
+* _Further branching (ex. You can also walk, take the Max, or drive)_
+* _Change the color of the scoreboard values to alert the user that their points are getting low_
+* _Add a progress bar that displays how far along the game you've reached_
+* _Output the final narrative choices as a story that the user can post to social media_
 
 ## Setup/Installation Requirements
 
 * _Clone this repository_
-* _Open a HTML file_
+* _Open an HTML file_
 * _Open web browser of choice_
-
+* _Enter your name and click 'Let's Begin!'_
+* _GitHub Pages link: <http://ohinton.github.io/epicoder>_
 
 ## Technologies Used
 
@@ -36,4 +47,4 @@ _A choose your own adventure game: How to get to Epicodus._
 
 *This software is licensed under the MIT license.*
 
-Copyright (c) 2016 **Olivia Hinton, Noah Yasskin, Stephanie Gurung and Maldon Meehan**
+Copyright (c) 2016 **Olivia Hinton, Noah Yasskin, Stephanie Gurung, and Maldon Meehan**

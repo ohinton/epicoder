@@ -20,7 +20,7 @@ _A Choose your own Adventure Game: How to get to Epicodus_
 
 ## Future Features
 
-* _Carousels to add some more photos and dynamism _
+* _Carousels to add some more photos and dynamism_
 * _A code challenge at the end to beat the game_
 * _Further branching (ex. You can also walk, take the Max, or drive)_
 * _Change the color of the scoreboard values to alert the user that their points are getting low_
